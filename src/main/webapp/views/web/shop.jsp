@@ -286,10 +286,10 @@
                         </div>
                         <div class="col-lg-3 col-md-6 col-sm-6">
                             <div class="product__item">
-                                <div class="product__item__pic set-bg" data-setbg="views/web/img/product/product-11.jpg">
+                                <div class="product__item__pic set-bg" data-setbg="views/web/img/product/puma.jpg">
                                 </div>
                                 <div class="product__item__text">
-                                    <h6>Diagonal Textured Cap</h6>
+                                    <h6>PUMA SMASH CAT</h6>
                                     <a href="#" class="add-cart">+ Add To Cart</a>
                                     <div class="rating">
                                         <i class="fa fa-star-o"></i>
@@ -298,7 +298,7 @@
                                         <i class="fa fa-star-o"></i>
                                         <i class="fa fa-star-o"></i>
                                     </div>
-                                    <h5>$60.9</h5>
+                                    <h5>1.800.000 VND</h5>
                                     <div class="product__color__select">
                                         <label for="pc-31">
                                             <input type="radio" id="pc-31">
