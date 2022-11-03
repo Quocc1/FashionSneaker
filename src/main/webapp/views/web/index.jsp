@@ -137,7 +137,7 @@ contentType="text/html" pageEncoding="UTF-8"%>
             <div class="product__item">
               <div
                 class="product__item__pic set-bg"
-                data-setbg="views/web/img/product/mlb3.jpg"
+                data-setbg="views/web/img/product/mlb4.jpg"
               >
               </div>
               <div class="product__item__text">
@@ -274,7 +274,7 @@ contentType="text/html" pageEncoding="UTF-8"%>
             <div class="product__item sale">
               <div
                 class="product__item__pic set-bg"
-                data-setbg="views/web/img/product/conver2.jpg"
+                data-setbg="views/web/img/product/converdo.jpg"
               >
                 <span class="label">Sale</span>
               </div>
@@ -309,7 +309,7 @@ contentType="text/html" pageEncoding="UTF-8"%>
             <div class="product__item">
               <div
                 class="product__item__pic set-bg"
-                data-setbg="views/web/img/product/trang.jpg"
+                data-setbg="views/web/img/product/nike2.jpg"
               >
               </div>
               <div class="product__item__text">
@@ -343,7 +343,7 @@ contentType="text/html" pageEncoding="UTF-8"%>
             <div class="product__item">
               <div
                 class="product__item__pic set-bg"
-                data-setbg="views/web/img/product/ultra.jpg"
+                data-setbg="views/web/img/product/ultratrang.jpg"
               >
               </div>
               <div class="product__item__text">

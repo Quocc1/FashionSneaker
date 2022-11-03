@@ -51,11 +51,11 @@
                     <div class="row">
                         <div class="col-lg-3 col-md-6 col-sm-6">
                             <div class="product__item">
-                                <div class="product__item__pic set-bg" data-setbg="views/web/img/product/product-2.jpg">
+                                <div class="product__item__pic set-bg" data-setbg="views/web/img/product/conver.jpg">
                                 </div>
                                 <div class="product__item__text">
                                     <h6>Converse Chuck Taylor All Star 1970s</h6>
-                                    <a href="#" class="add-cart">+ Add To Cart</a>
+                                    <a href="#" class="add-cart">+ Thêm Vào Giỏ Hàng</a>
                                     <div class="rating">
                                         <i class="fa fa-star-o"></i>
                                         <i class="fa fa-star-o"></i>
@@ -85,7 +85,7 @@
                                 </div>
                                 <div class="product__item__text">
                                     <h6>New Balance 550 White Green</h6>
-                                    <a href="#" class="add-cart">+ Add To Cart</a>
+                                    <a href="#" class="add-cart">+ Thêm Vào Giỏ Hàng</a>
                                     <div class="rating">
                                         <i class="fa fa-star"></i>
                                         <i class="fa fa-star"></i>
@@ -114,7 +114,7 @@
                                 </div>
                                 <div class="product__item__text">
                                     <h6>MLB Chunky New York White</h6>
-                                    <a href="#" class="add-cart">+ Add To Cart</a>
+                                    <a href="#" class="add-cart">+ Thêm Vào Giỏ Hàng</a>
                                     <div class="rating">
                                         <i class="fa fa-star-o"></i>
                                         <i class="fa fa-star-o"></i>
@@ -144,7 +144,7 @@
                                 </div>
                                 <div class="product__item__text">
                                     <h6>Air Jordan 4 Pure Money</h6>
-                                    <a href="#" class="add-cart">+ Add To Cart</a>
+                                    <a href="#" class="add-cart">+ Thêm Vào Giỏ Hàng</a>
                                     <div class="rating">
                                         <i class="fa fa-star"></i>
                                         <i class="fa fa-star"></i>
@@ -173,7 +173,7 @@
                                 </div>
                                 <div class="product__item__text">
                                     <h6>Air Jordan 1 Mid ‘College Grey’</h6>
-                                    <a href="#" class="add-cart">+ Add To Cart</a>
+                                    <a href="#" class="add-cart">+ Thêm Vào Giỏ Hàng</a>
                                     <div class="rating">
                                         <i class="fa fa-star-o"></i>
                                         <i class="fa fa-star-o"></i>
@@ -202,7 +202,7 @@
                                 </div>
                                 <div class="product__item__text">
                                     <h6>Converse All-Court VLTG</h6>
-                                    <a href="#" class="add-cart">+ Add To Cart</a>
+                                    <a href="#" class="add-cart">+ Thêm Vào Giỏ Hàng</a>
                                     <div class="rating">
                                         <i class="fa fa-star-o"></i>
                                         <i class="fa fa-star-o"></i>
@@ -231,7 +231,7 @@
                                 </div>
                                 <div class="product__item__text">
                                     <h6>Nike Air Force 1</h6>
-                                    <a href="#" class="add-cart">+ Add To Cart</a>
+                                    <a href="#" class="add-cart">+ Thêm Vào Giỏ Hàng</a>
                                     <div class="rating">
                                         <i class="fa fa-star-o"></i>
                                         <i class="fa fa-star-o"></i>
@@ -261,7 +261,7 @@
                                 </div>
                                 <div class="product__item__text">
                                     <h6>Adidas Ultra Boost Triple White</h6>
-                                    <a href="#" class="add-cart">+ Add To Cart</a>
+                                    <a href="#" class="add-cart">+ Thêm Vào Giỏ Hàng</a>
                                     <div class="rating">
                                         <i class="fa fa-star"></i>
                                         <i class="fa fa-star"></i>
@@ -286,11 +286,11 @@
                         </div>
                         <div class="col-lg-3 col-md-6 col-sm-6">
                             <div class="product__item">
-                                <div class="product__item__pic set-bg" data-setbg="views/web/img/product/puma.jpg">
+                                <div class="product__item__pic set-bg" data-setbg="views/web/img/product/puma2.jpg">
                                 </div>
                                 <div class="product__item__text">
-                                    <h6>PUMA SMASH CAT</h6>
-                                    <a href="#" class="add-cart">+ Add To Cart</a>
+                                    <h6>PUMA SMASH</h6>
+                                    <a href="#" class="add-cart">+ Thêm Vào Giỏ Hàng</a>
                                     <div class="rating">
                                         <i class="fa fa-star-o"></i>
                                         <i class="fa fa-star-o"></i>
@@ -315,12 +315,12 @@
                         </div>
                         <div class="col-lg-3 col-md-6 col-sm-6">
                             <div class="product__item sale">
-                                <div class="product__item__pic set-bg" data-setbg="views/web/img/product/product-12.jpg">
+                                <div class="product__item__pic set-bg" data-setbg="views/web/img/product/vans2.jpg">
                                     <span class="label">Sale</span>
                                 </div>
                                 <div class="product__item__text">
-                                    <h6>Ankle Boots</h6>
-                                    <a href="#" class="add-cart">+ Add To Cart</a>
+                                    <h6>Vans Old Skool White</h6>
+                                    <a href="#" class="add-cart">+ Thêm Vào Giỏ Hàng</a>
                                     <div class="rating">
                                         <i class="fa fa-star"></i>
                                         <i class="fa fa-star"></i>
@@ -328,7 +328,7 @@
                                         <i class="fa fa-star"></i>
                                         <i class="fa fa-star-o"></i>
                                     </div>
-                                    <h5>$98.49</h5>
+                                    <h5>1.900.000 VND</h5>
                                     <div class="product__color__select">
                                         <label for="pc-34">
                                             <input type="radio" id="pc-34">
@@ -345,11 +345,11 @@
                         </div>
                         <div class="col-lg-3 col-md-6 col-sm-6">
                             <div class="product__item">
-                                <div class="product__item__pic set-bg" data-setbg="views/web/img/product/product-13.jpg">
+                                <div class="product__item__pic set-bg" data-setbg="views/web/img/product/stan2.jpg">
                                 </div>
                                 <div class="product__item__text">
-                                    <h6>T-shirt Contrast Pocket</h6>
-                                    <a href="#" class="add-cart">+ Add To Cart</a>
+                                    <h6>Adidas Stan Smith</h6>
+                                    <a href="#" class="add-cart">+ Thêm Vào Giỏ Hàng</a>
                                     <div class="rating">
                                         <i class="fa fa-star-o"></i>
                                         <i class="fa fa-star-o"></i>
@@ -357,7 +357,7 @@
                                         <i class="fa fa-star-o"></i>
                                         <i class="fa fa-star-o"></i>
                                     </div>
-                                    <h5>$49.66</h5>
+                                    <h5>1.500.000 VND</h5>
                                     <div class="product__color__select">
                                         <label for="pc-37">
                                             <input type="radio" id="pc-37">
@@ -374,11 +374,11 @@
                         </div>
                         <div class="col-lg-3 col-md-6 col-sm-6">
                             <div class="product__item">
-                                <div class="product__item__pic set-bg" data-setbg="views/web/img/product/product-14.jpg">
+                                <div class="product__item__pic set-bg" data-setbg="views/web/img/product/nb2.jpg">
                                 </div>
                                 <div class="product__item__text">
-                                    <h6>Basic Flowing Scarf</h6>
-                                    <a href="#" class="add-cart">+ Add To Cart</a>
+                                    <h6>New Balance 574 'White Blue'</h6>
+                                    <a href="#" class="add-cart">+ Thêm Vào Giỏ Hàng</a>
                                     <div class="rating">
                                         <i class="fa fa-star-o"></i>
                                         <i class="fa fa-star-o"></i>
@@ -386,7 +386,7 @@
                                         <i class="fa fa-star-o"></i>
                                         <i class="fa fa-star-o"></i>
                                     </div>
-                                    <h5>$26.28</h5>
+                                    <h5>3.500.000</h5>
                                     <div class="product__color__select">
                                         <label for="pc-40">
                                             <input type="radio" id="pc-40">
