@@ -108,7 +108,7 @@ contentType="text/html" pageEncoding="UTF-8"%>
               </div>
               <div class="product__item__text">
                 <h6>New Balance 550 White Green</h6>
-                <a href="#" class="add-cart">+ Add To Cart</a>
+                <a href="#" class="add-cart">+ Thêm Vào Giỏ Hàng</a>
                 <div class="rating">
                   <i class="fa fa-star-o"></i>
                   <i class="fa fa-star-o"></i>
@@ -116,7 +116,7 @@ contentType="text/html" pageEncoding="UTF-8"%>
                   <i class="fa fa-star-o"></i>
                   <i class="fa fa-star-o"></i>
                 </div>
-                <h5>$1.500.000</h5>
+                <h5>1.500.000 VND</h5>
                 <div class="product__color__select">
                   <label for="pc-1">
                     <input type="radio" id="pc-1" />
@@ -142,7 +142,7 @@ contentType="text/html" pageEncoding="UTF-8"%>
               </div>
               <div class="product__item__text">
                 <h6>MLB Chunky New York White</h6>
-                <a href="#" class="add-cart">+ Add To Cart</a>
+                <a href="#" class="add-cart">+ Thêm Vào Giỏ Hàng</a>
                 <div class="rating">
                   <i class="fa fa-star-o"></i>
                   <i class="fa fa-star-o"></i>
@@ -150,7 +150,7 @@ contentType="text/html" pageEncoding="UTF-8"%>
                   <i class="fa fa-star-o"></i>
                   <i class="fa fa-star-o"></i>
                 </div>
-                <h5>$3.800.000</h5>
+                <h5>3.800.000 VND</h5>
                 <div class="product__color__select">
                   <label for="pc-4">
                     <input type="radio" id="pc-4" />
@@ -177,7 +177,7 @@ contentType="text/html" pageEncoding="UTF-8"%>
               </div>
               <div class="product__item__text">
                 <h6>Converse Chuck Taylor All Star 1970s</h6>
-                <a href="#" class="add-cart">+ Add To Cart</a>
+                <a href="#" class="add-cart">+ Thêm Vào Giỏ Hàng</a>
                 <div class="rating">
                   <i class="fa fa-star"></i>
                   <i class="fa fa-star"></i>
@@ -185,7 +185,7 @@ contentType="text/html" pageEncoding="UTF-8"%>
                   <i class="fa fa-star"></i>
                   <i class="fa fa-star-o"></i>
                 </div>
-                <h5>$2.000.000</h5>
+                <h5>2.000.000 VND</h5>
                 <div class="product__color__select">
                   <label for="pc-7">
                     <input type="radio" id="pc-7" />
@@ -211,7 +211,7 @@ contentType="text/html" pageEncoding="UTF-8"%>
               </div>
               <div class="product__item__text">
                 <h6>Air Jordan 4 Pure Money</h6>
-                <a href="#" class="add-cart">+ Add To Cart</a>
+                <a href="#" class="add-cart">+ Thêm Vào Giỏ Hàng</a>
                 <div class="rating">
                   <i class="fa fa-star-o"></i>
                   <i class="fa fa-star-o"></i>
@@ -219,7 +219,7 @@ contentType="text/html" pageEncoding="UTF-8"%>
                   <i class="fa fa-star-o"></i>
                   <i class="fa fa-star-o"></i>
                 </div>
-                <h5>$10.000.000</h5>
+                <h5>10.000.000 VND</h5>
                 <div class="product__color__select">
                   <label for="pc-10">
                     <input type="radio" id="pc-10" />
@@ -245,7 +245,7 @@ contentType="text/html" pageEncoding="UTF-8"%>
               </div>
               <div class="product__item__text">
                 <h6>Air Jordan 1 Mid ‘College Grey’</h6>
-                <a href="#" class="add-cart">+ Add To Cart</a>
+                <a href="#" class="add-cart">+ Thêm Vào Giỏ Hàng</a>
                 <div class="rating">
                   <i class="fa fa-star-o"></i>
                   <i class="fa fa-star-o"></i>
@@ -253,7 +253,7 @@ contentType="text/html" pageEncoding="UTF-8"%>
                   <i class="fa fa-star-o"></i>
                   <i class="fa fa-star-o"></i>
                 </div>
-                <h5>$4.000.000</h5>
+                <h5>4.000.000 VND</h5>
                 <div class="product__color__select">
                   <label for="pc-13">
                     <input type="radio" id="pc-13" />
@@ -280,7 +280,7 @@ contentType="text/html" pageEncoding="UTF-8"%>
               </div>
               <div class="product__item__text">
                 <h6>Converse All-Court VLTG</h6>
-                <a href="#" class="add-cart">+ Add To Cart</a>
+                <a href="#" class="add-cart">+ Thêm Vào Giỏ Hàng</a>
                 <div class="rating">
                   <i class="fa fa-star"></i>
                   <i class="fa fa-star"></i>
@@ -288,7 +288,7 @@ contentType="text/html" pageEncoding="UTF-8"%>
                   <i class="fa fa-star"></i>
                   <i class="fa fa-star-o"></i>
                 </div>
-                <h5>$1.190.000</h5>
+                <h5>1.190.000 VND</h5>
                 <div class="product__color__select">
                   <label for="pc-16">
                     <input type="radio" id="pc-16" />
@@ -314,7 +314,7 @@ contentType="text/html" pageEncoding="UTF-8"%>
               </div>
               <div class="product__item__text">
                 <h6>Nike Air Force 1</h6>
-                <a href="#" class="add-cart">+ Add To Cart</a>
+                <a href="#" class="add-cart">+ Thêm Vào Giỏ Hàng</a>
                 <div class="rating">
                   <i class="fa fa-star-o"></i>
                   <i class="fa fa-star-o"></i>
@@ -322,7 +322,7 @@ contentType="text/html" pageEncoding="UTF-8"%>
                   <i class="fa fa-star-o"></i>
                   <i class="fa fa-star-o"></i>
                 </div>
-                <h5>$2.500.000</h5>
+                <h5>2.500.000 VND</h5>
                 <div class="product__color__select">
                   <label for="pc-19">
                     <input type="radio" id="pc-19" />
@@ -348,7 +348,7 @@ contentType="text/html" pageEncoding="UTF-8"%>
               </div>
               <div class="product__item__text">
                 <h6>Adidas Ultra Boost Triple White</h6>
-                <a href="#" class="add-cart">+ Add To Cart</a>
+                <a href="#" class="add-cart">+ Thêm Vào Giỏ Hàng</a>
                 <div class="rating">
                   <i class="fa fa-star-o"></i>
                   <i class="fa fa-star-o"></i>
@@ -356,7 +356,7 @@ contentType="text/html" pageEncoding="UTF-8"%>
                   <i class="fa fa-star-o"></i>
                   <i class="fa fa-star-o"></i>
                 </div>
-                <h5>$3.000.000</h5>
+                <h5>3.000.000 VND</h5>
                 <div class="product__color__select">
                   <label for="pc-22">
                     <input type="radio" id="pc-22" />
