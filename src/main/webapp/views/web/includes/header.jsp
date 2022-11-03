@@ -25,7 +25,7 @@
                         <a href="#" class="search-switch"><img src="views/web/img/icon/search.png" alt="" style="width: 18px"></a>
                         <a href="shopping-cart.jsp"><img src="views/web/img/icon/cart.png" alt="" style="width: 18px"> <span>0</span></a>   
                         <div class="price text-white">$0.00</div>
-                        <a href="#" style="margin-left: 5rem">Sign in</a>
+                        <a href="signin" style="margin-left: 5rem">Sign in</a>
                     </div>
                 </div>
             </div>
