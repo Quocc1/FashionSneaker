@@ -176,7 +176,7 @@ contentType="text/html" pageEncoding="UTF-8"%>
                 <span class="label">Sale</span>
               </div>
               <div class="product__item__text">
-                <h6>Chuck Taylor All Star 1970s</h6>
+                <h6>Converse Chuck Taylor All Star 1970s</h6>
                 <a href="#" class="add-cart">+ Add To Cart</a>
                 <div class="rating">
                   <i class="fa fa-star"></i>
@@ -347,7 +347,7 @@ contentType="text/html" pageEncoding="UTF-8"%>
               >
               </div>
               <div class="product__item__text">
-                <h6>Ultra Boost Triple White</h6>
+                <h6>Adidas Ultra Boost Triple White</h6>
                 <a href="#" class="add-cart">+ Add To Cart</a>
                 <div class="rating">
                   <i class="fa fa-star-o"></i>
