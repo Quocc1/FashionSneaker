@@ -107,7 +107,7 @@ contentType="text/html" pageEncoding="UTF-8"%>
                 <span class="label">New</span>
               </div>
               <div class="product__item__text">
-                <h6>New-Balance</h6>
+                <h6>New Balance 550 White Green</h6>
                 <a href="#" class="add-cart">+ Add To Cart</a>
                 <div class="rating">
                   <i class="fa fa-star-o"></i>
@@ -137,11 +137,11 @@ contentType="text/html" pageEncoding="UTF-8"%>
             <div class="product__item">
               <div
                 class="product__item__pic set-bg"
-                data-setbg="views/web/img/product/mlb3.jpg"
+                data-setbg="views/web/img/product/mlb4.jpg"
               >
               </div>
               <div class="product__item__text">
-                <h6>MLB Chunky Liner New York Yankees Off White</h6>
+                <h6>MLB Chunky New York White</h6>
                 <a href="#" class="add-cart">+ Add To Cart</a>
                 <div class="rating">
                   <i class="fa fa-star-o"></i>
@@ -274,7 +274,7 @@ contentType="text/html" pageEncoding="UTF-8"%>
             <div class="product__item sale">
               <div
                 class="product__item__pic set-bg"
-                data-setbg="views/web/img/product/conver2.jpg"
+                data-setbg="views/web/img/product/converdo.jpg"
               >
                 <span class="label">Sale</span>
               </div>
@@ -309,11 +309,11 @@ contentType="text/html" pageEncoding="UTF-8"%>
             <div class="product__item">
               <div
                 class="product__item__pic set-bg"
-                data-setbg="views/web/img/product/trang.jpg"
+                data-setbg="views/web/img/product/nike2.jpg"
               >
               </div>
               <div class="product__item__text">
-                <h6>Converse Run Star Hike</h6>
+                <h6>Nike Air Force 1</h6>
                 <a href="#" class="add-cart">+ Add To Cart</a>
                 <div class="rating">
                   <i class="fa fa-star-o"></i>
@@ -343,11 +343,11 @@ contentType="text/html" pageEncoding="UTF-8"%>
             <div class="product__item">
               <div
                 class="product__item__pic set-bg"
-                data-setbg="views/web/img/product/ultra.jpg"
+                data-setbg="views/web/img/product/ultratrang.jpg"
               >
               </div>
               <div class="product__item__text">
-                <h6>Ultraboost</h6>
+                <h6>Ultra Boost Triple White</h6>
                 <a href="#" class="add-cart">+ Add To Cart</a>
                 <div class="rating">
                   <i class="fa fa-star-o"></i>
