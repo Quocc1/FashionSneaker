@@ -25,9 +25,39 @@
             rel="stylesheet"
             />
         <link rel="stylesheet" href="views/web/css/bootstrap.min.css" type="text/css" />
+        <!-- Google Font -->
+        <link
+            href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@300;400;600;700;800;900&display=swap"
+            rel="stylesheet"
+            />
+
+        <!-- Css Styles -->
+        <link rel="stylesheet" href="views/web/css/bootstrap.min.css" type="text/css" />
+        <link rel="stylesheet" href="views/web/css/font-awesome.min.css" type="text/css" />
+        <link rel="stylesheet" href="views/web/css/elegant-icons.css" type="text/css" />
+        <link rel="stylesheet" href="views/web/css/magnific-popup.css" type="text/css" />
+        <link rel="stylesheet" href="views/web/css/nice-select.css" type="text/css" />
+        <link rel="stylesheet" href="views/web/css/owl.carousel.min.css" type="text/css" />
+        <link rel="stylesheet" href="views/web/css/slicknav.min.css" type="text/css" />
+        <link rel="stylesheet" href="views/web/css/style.css" type="text/css" />
+
+        <!-- Js Plugins -->
+        <script src="views/web/js/jquery-3.3.1.min.js"></script>
+        <script src="views/web/js/bootstrap.min.js"></script>
+        <script src="views/web/js/jquery.nice-select.min.js"></script>
+        <script src="views/web/js/jquery.nicescroll.min.js"></script>
+        <script src="views/web/js/jquery.magnific-popup.min.js"></script>
+        <script src="views/web/js/jquery.countdown.min.js"></script>
+        <script src="views/web/js/jquery.slicknav.js"></script>
+        <script src="views/web/js/mixitup.min.js"></script>
+        <script src="views/web/js/owl.carousel.min.js"></script>
+        <script src="views/web/js/main.js"></script>
         <title>JSP Page</title>
     </head>
     <body>
+        <!-- Header Section Begin -->
+        <jsp:include page="./includes/header.jsp"></jsp:include>
+        <!-- Header Section End -->
         <!-- Section: Design Block -->
         <!-- Section: Design Block -->
         <section class="text-center">
@@ -47,7 +77,7 @@
 
                     <div class="row d-flex justify-content-center">
                         <div class="col-lg-8">
-                            <h2 class="fw-bold mb-5">Sign up now</h2>
+                            <h2 class="fw-bold mb-5 text-black">Sign up now</h2>
                             <form>
                                 <!-- 2 column grid layout with text inputs for the first and last names -->
                                 <div class="row">
@@ -76,13 +106,13 @@
                                     <input type="password" id="form3Example4" class="form-control" />
                                     <label class="form-label" for="form3Example4">Password</label>
                                 </div>
-
-                            
-
                                 <!-- Submit button -->
                                 <button type="submit" class="btn btn-primary btn-block mb-4">
                                     Sign up
                                 </button>
+                                <div class="text-center">
+                                    <p class="text-black">You have a account ? <a href="signin" class="text-primary">Sign in.</a> </p>
+                                </div>
                             </form>
                         </div>
                     </div>
