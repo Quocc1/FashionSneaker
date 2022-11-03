@@ -51,7 +51,7 @@
                     <div class="row">
                         <div class="col-lg-3 col-md-6 col-sm-6">
                             <div class="product__item">
-                                <div class="product__item__pic set-bg" data-setbg="views/web/img/product/conver.jpg">
+                                <div class="product__item__pic set-bg" data-setbg="views/web/img/product/product-2.jpg">
                                 </div>
                                 <div class="product__item__text">
                                     <h6>PiquÃ© Biker Jacket</h6>
