@@ -17,7 +17,7 @@ import javax.servlet.http.HttpServletResponse;
  *
  * @author Asus
  */
-@WebServlet(name = "SignupController", urlPatterns = {"/Signup"})
+@WebServlet(name = "SignupController", urlPatterns = {"/signup"})
 public class SignupController extends HttpServlet
 {
     @Override
