@@ -52,7 +52,7 @@
         <script src="views/web/js/mixitup.min.js"></script>
         <script src="views/web/js/owl.carousel.min.js"></script>
         <script src="views/web/js/main.js"></script>
-        <title>JSP Page</title>
+        <title>Fashion Sneaker</title>
     </head>
     <body>
         <!-- Header Section Begin -->
@@ -77,7 +77,7 @@
 
                     <div class="row d-flex justify-content-center">
                         <div class="col-lg-8">
-                            <h2 class="fw-bold mb-5 text-black">Sign up now</h2>
+                            <h2 class="fw-bold mb-5 text-black">Sign Up</h2>
                             <form>
                                 <!-- 2 column grid layout with text inputs for the first and last names -->
                                 <div class="row">

@@ -76,7 +76,7 @@
 
                     <div class="row d-flex justify-content-center">
                         <div class="col-lg-8">
-                            <h2 class="fw-bold mb-5 text-black">Sign in now</h2>
+                            <h2 class="fw-bold mb-5 text-black">Sign In</h2>
                             <form>
                                 <!-- 2 column grid layout with text inputs for the first and last names -->
 
