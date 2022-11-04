@@ -1,47 +1,65 @@
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
-<footer class="footer">
-    <div class="container">
+<footer class="footer" style="background-color: #4D4D4D">
+    <div class="container-fluid">
         <div class="row">
             <div class="col-lg-3 col-md-6 col-sm-6">
                 <div class="footer__about">
-                    <div class="footer__logo">
-                        <a href="#"><img src="views/web/img/footer-logo.png" alt=""></a>
+                    <div class="footer__logo ml-1">
+                        <a href="home"><img src="views/web/img/Logo Web Footer.png" style="margin-top: -66px" alt=""></a>
                     </div>
-                    <p>The customer is at the heart of our unique business model, which includes design.</p>
-                    <a href="#"><img src="views/web/img/payment.png" alt=""></a>
+                   <!-- <h4>Social Media</h4> <br> 
+                    <a href="home"><img src="views/web/img/Social Media.png" alt=""></a> -->
                 </div>
             </div>
             <div class="col-lg-2 offset-lg-1 col-md-3 col-sm-6">
                 <div class="footer__widget">
-                    <h6>Shopping</h6>
+                    <h6>SẢN PHẨM</h6>
                     <ul>
-                        <li><a href="#">Clothing Store</a></li>
-                        <li><a href="#">Trending Shoes</a></li>
-                        <li><a href="#">Accessories</a></li>
-                        <li><a href="#">Sale</a></li>
+                        <li><a href="shop">Giày nam</a></li>
+                        <li><a href="shop">Giày nữ</a></li>
+                        <li><a href="shop">Phụ kiện</a></li>
+                        <li><a href="shop">Sale-off</a></li>
                     </ul>
                 </div>
             </div>
             <div class="col-lg-2 col-md-3 col-sm-6">
                 <div class="footer__widget">
-                    <h6>Shopping</h6>
+                    <h6>Về Công Ty</h6>
                     <ul>
-                        <li><a href="#">Contact Us</a></li>
-                        <li><a href="#">Payment Methods</a></li>
-                        <li><a href="#">Delivary</a></li>
-                        <li><a href="#">Return & Exchanges</a></li>
+                        <li><a href="home">Tuyển dụng</a></li>
+                        <li><a href="home">Nhượng quyền</a></li>
+                        <li><a href="home">Về Fashion Sneaker</a></li>
                     </ul>
                 </div>
             </div>
+           <!-- <div class="col-lg-2 col-md-3 col-sm-6">
+                <div class="footer__widget">
+                    <h6>Hổ Trợ</h6>
+                    <ul>
+                        <li><a href="home">FAQs</a></li>
+                        <li><a href="home">Bảo mật thông tin</a></li>
+                        <li><a href="home">Chính sách chung</a></li>
+                        <li><a href="home">Tra cứu đơn hàng</a></li>
+                    </ul>
+                </div>
+            </div>  -->
             <div class="col-lg-3 offset-lg-1 col-md-6 col-sm-6">
                 <div class="footer__widget">
-                    <h6>NewLetter</h6>
+                    <h6>Liên Hệ</h6>
                     <div class="footer__newslatter">
-                        <p>Be the first to know about new arrivals, look books, sales & promos!</p>
+                        <!--<p>Hotline: 0906596432 <br> <br> Email góp ý </p>
+                        <form action="#">
+                            <input type="text" placeholder="Your email">
+                            <button type="submit"><span class="icon_mail_alt"></span></button>
+                        </form> -->
+                        <ul>
+                        <li><a href="home">Hotline: 0906596432</a></li>
+                        <li><a href="home"></a>Email góp ý</li>
                         <form action="#">
                             <input type="text" placeholder="Your email">
                             <button type="submit"><span class="icon_mail_alt"></span></button>
                         </form>
+                    </ul>
                     </div>
                 </div>
             </div>
@@ -49,15 +67,11 @@
         <div class="row">
             <div class="col-lg-12 text-center">
                 <div class="footer__copyright__text">
-                    <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
                     <p>Copyright ©
                         <script>
                             document.write(new Date().getFullYear());
-                        </script>2020
-                        All rights reserved | This template is made with <i class="fa fa-heart-o"
-                                                                            aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank">Colorlib</a>
+                        </script> Fashion Sneaker. All rights reserved. 
                     </p>
-                    <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
                 </div>
             </div>
         </div>
