@@ -2,10 +2,22 @@
 
 <!-- Header Section Begin -->
 <header class="header text-white">
+    <div class="header__top">
+        <div class="container">
+            <div class="row">
+                <div class="header__top__right ml-auto">
+                    <div class="header__top__links">
+                        <a href="signin">Sign in</a>
+                        <a href="signup">Sign up</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
     <div class="container-fluid"  style="background-color: #FFFFFF">
         <div class="container-fluid">
             <div class="row">
-                 <div class="col-lg-3 col-md-3">
+                <div class="col-lg-3 col-md-3">
                     <div class="Logo Web ml-4">
                         <a href="home"><img src="views/web/img/Logo Web.png" alt=""></a>
                     </div>
@@ -23,9 +35,8 @@
                 <div class="col-lg-3 col-md-3">
                     <div class="header__nav__option">
                         <a href="#" class="search-switch"><img src="views/web/img/icon/search.png" alt="" style="width: 18px"></a>
-                        <a href="shopping-cart.jsp"><img src="views/web/img/icon/cart.png" alt="" style="width: 18px"> <span>0</span></a>   
+                        <a href="cart"><img src="views/web/img/icon/cart.png" alt="" style="width: 18px"> <span>0</span></a>   
                         <div class="price text-black">$0.00</div>
-                        <a href="signin" style="margin-left: 1rem" >Sign in</a>
                     </div>
                 </div>
 
