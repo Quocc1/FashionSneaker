@@ -47,6 +47,11 @@ CREATE TABLE cart (
 )
 GO
 
+INSERT INTO account VALUES ('ny64394@gmail.com','Nguyen Y','0886315580','123',1)
+INSERT INTO account VALUES ('caobinhoh@gmail.com','Nguyen Tri Quoc','0327325177','1234',0)
+INSERT INTO account VALUES ('dinhquangthang3112002@gmail.com','Dinh Quang Thang','0334687767','12345',1)
+INSERT INTO account VALUES ('thanhtung@gmail.com','Nguyen Thanh Tung','08864267342','123456',0)
+
 INSERT INTO category VALUES('Nam');
 INSERT INTO category VALUES(N'Nữ');
 
@@ -151,3 +156,4 @@ INSERT INTO product VALUES(1, 1, 'Nike Air Jordan 1 High Panda Twist ', N'Là m�
 Tông màu được sử dụng ở đây là những tông lạnh mang sắc thái nhẹ, cùng với sự sắp xếp một cách khéo léo các lớp phủ da lộn cao cấp.
 Phía dưới của đôi giày, phần đế giữa được phủ một lớp da trơn có màu trắng, tương phản trực tiếp với cổ giày, phù hiệu Wings và Swoosh khoác lên mình màu đen sẫm.', 5890000, 40, 10, 'a');
 INSERT INTO product VALUES(1, 3, 'Vans Classic Slip-On', N'Vans Classic Slip-On Checkerboard luôn là Best-seller được restock liên tục tại Drake nhờ vào thiết kế Checkerboard kinh điển cực kỳ thời trang và cá tính. Chất vải Canvas mềm, nhẹ có màu trắng ngà cổ điển kết hợp với các họa tiết caro được in rõ nét trên thân giày chắc chắn sẽ mang đến cho bạn một sản phẩm cực chất và sành điệu.', 2100000, 40, 10, 'a');
+

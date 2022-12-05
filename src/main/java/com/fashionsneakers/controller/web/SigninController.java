@@ -25,6 +25,10 @@ public class SigninController extends HttpServlet
     {
         RequestDispatcher rd = request.getRequestDispatcher("/views/web/signin.jsp");
         rd.forward(request, response);
+        String email = request.getParameter("email");
+        String password = request.getParameter("pass");
+        
+
     }  
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
     }
