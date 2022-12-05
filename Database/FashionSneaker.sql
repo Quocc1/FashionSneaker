@@ -37,7 +37,7 @@ CREATE TABLE product (
 	quantity INT NOT NULL,
 	img_url VARCHAR(100) NOT NULL,
 )
-GO
+GO 
 
 CREATE TABLE cart (
 	id INT IDENTITY(1,1) PRIMARY KEY,
