@@ -2,6 +2,7 @@ package com.fashionsneaker.service.impl;
 
 import com.fashionsneaker.dao.IProductDAO;
 import com.fashionsneaker.model.ProductModel;
+import com.fashionsneaker.paging.Pageble;
 import com.fashionsneaker.service.IProductService;
 import java.util.List;
 import javax.inject.Inject;
@@ -12,8 +13,8 @@ public class ProductService implements IProductService {
     private IProductDAO productDAO;
 
     @Override
-    public List<ProductModel> findAll() {
-        return productDAO.findAll();
+    public List<ProductModel> findAll(Pageble pageble) {
+        return productDAO.findAll(pageble);
     }
 
     @Override
@@ -31,5 +32,10 @@ public class ProductService implements IProductService {
     @Override
     public void delete(int id) {
         productDAO.delete(id);
+    }
+
+    @Override
+    public int getTotalItem() {
+        return productDAO.getTotalItem();
     }
 }

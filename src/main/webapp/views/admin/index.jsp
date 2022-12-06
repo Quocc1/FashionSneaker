@@ -55,7 +55,7 @@
 
                 <!-- Nav Item - Tables -->
                 <li class="nav-item">
-                    <a class="nav-link" href="admin-product">
+                    <a class="nav-link" href="admin-product?type=list&page=1&maxPageItem=2&sortName=product_name&sortBy=desc">
                         <i class="fas fa-fw fa-table"></i>
                         <span>Sản phẩm</span></a>
                 </li>

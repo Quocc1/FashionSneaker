@@ -18,6 +18,10 @@
         <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
         <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"></script>
         <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.2/css/bootstrap.min.css">
+        <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.2/js/bootstrap.min.js"></script>
+        <script src="views/admin/js/jquery.twbsPagination.js" type="text/javascript"></script>
 
         <!-- Custom fonts for this template -->
         <link href="views/admin/vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
@@ -289,73 +293,73 @@
 
 
                     <!-- Start of Table -->
-                    <div class="container-xl">
-                        <div class="table-responsive">
-                            <div class="table-wrapper">
-                                <div class="table-title">
-                                    <div class="row">
-                                        <div class="col-sm-8"><h2>Customer <b>Details</b></h2></div>
-                                        <div class="col-sm-4">
-                                            <div class="search-box">
-                                                <i class="material-icons">&#xE8B6;</i>
-                                                <input type="text" class="form-control" placeholder="Search&hellip;">
+                    <form action="AdminProductController" id="formSubmit" method="get">
+                        <div class="container-xl">
+                            <div class="table-responsive">
+                                <div class="table-wrapper">
+                                    <div class="table-title">
+                                        <div class="row">
+                                            <div class="col-sm-8"><h2>Customer <b>Details</b></h2></div>
+                                            <div class="col-sm-4">
+                                                <div class="search-box">
+                                                    <i class="material-icons">&#xE8B6;</i>
+                                                    <input type="text" class="form-control" placeholder="Search&hellip;">
+                                                </div>
                                             </div>
                                         </div>
                                     </div>
-                                </div>
-                                <table class="table table-striped table-hover table-bordered">
-                                    <thead>
-                                        <tr>
-                                            <th>Id</th><i class="fa fa-sort"></i>
-                                    <th class="col-1">Category</th>
-                                    <th class="col-1">Brand</th>
-                                    <th>Name</th>
-                                    <th>Description</th>
-                                    <th>Price</th>                                           
-                                    <th>Size</th>
-                                    <th class="col-1">Quantity</th>
-                                    <th>Image</th>
-                                    <th>Actions</th>
-                                    </tr>
-                                    </thead>
-                                    <tbody>
-                                        <c:forEach var="item" items="${model.listResult}">
+                                    <table class="table table-striped table-hover table-bordered">
+                                        <thead>
                                             <tr>
-                                                <td>${item.id}</td>
-                                                <td>${item.category_id}</td>
-                                                <td>${item.brand_id}</td>
-                                                <td>${item.product_name}</td>
-                                                <td>${item.description}</td>
-                                                <td>${item.price}</td>
-                                                <td>${item.size}</td>
-                                                <td>${item.quantity}</td>
-                                                <td>${item.img_url}</td>
-                                                <td>
-                                                    <a href="#" class="view" title="View" data-toggle="tooltip"><i class="material-icons">&#xE417;</i></a>
-                                                    <a href="#" class="edit" title="Edit" data-toggle="tooltip"><i class="material-icons">&#xE254;</i></a>
-                                                    <a href="#" class="delete" title="Delete" data-toggle="tooltip"><i class="material-icons">&#xE872;</i></a>
-                                                </td>
-                                            </tr>    
-                                        </c:forEach>
+                                                <th>Id</th><i class="fa fa-sort"></i>
+                                        <th class="col-1">Category</th>
+                                        <th class="col-1">Brand</th>
+                                        <th>Name</th>
+                                        <th>Description</th>
+                                        <th>Price</th>                                           
+                                        <th>Size</th>
+                                        <th class="col-1">Quantity</th>
+                                        <th>Image</th>
+                                        <th>Actions</th>
+                                        </tr>
+                                        </thead>
+                                        <tbody>
+                                            <c:forEach var="item" items="${model.listResult}">
+                                                <tr>
+                                                    <td>${item.id}</td>
+                                                    <td>${item.category_id}</td>
+                                                    <td>${item.brand_id}</td>
+                                                    <td>${item.product_name}</td>
+                                                    <td>${item.description}</td>
+                                                    <td>${item.price}</td>
+                                                    <td>${item.size}</td>
+                                                    <td>${item.quantity}</td>
+                                                    <td>${item.img_url}</td>
+                                                    <td>
+                                                        <a href="#" class="view" title="View" data-toggle="tooltip"><i class="material-icons">&#xE417;</i></a>
+                                                        <a href="#" class="edit" title="Edit" data-toggle="tooltip"><i class="material-icons">&#xE254;</i></a>
+                                                        <a href="#" class="delete" title="Delete" data-toggle="tooltip"><i class="material-icons">&#xE872;</i></a>
+                                                    </td>
+                                                </tr>    
+                                            </c:forEach>
 
-                                                
-                                    </tbody>
-                                </table>
-                                <div class="clearfix">
-                                    <div class="hint-text">Showing <b>5</b> out of <b>25</b> entries</div>
-                                    <ul class="pagination">
-                                        <li class="page-item disabled"><a href="#"><i class="fa fa-angle-double-left"></i></a></li>
-                                        <li class="page-item"><a href="#" class="page-link">1</a></li>
-                                        <li class="page-item"><a href="#" class="page-link">2</a></li>
-                                        <li class="page-item active"><a href="#" class="page-link">3</a></li>
-                                        <li class="page-item"><a href="#" class="page-link">4</a></li>
-                                        <li class="page-item"><a href="#" class="page-link">5</a></li>
-                                        <li class="page-item"><a href="#" class="page-link"><i class="fa fa-angle-double-right"></i></a></li>
-                                    </ul>
+
+                                        </tbody>
+                                    </table>
+                                    <div class="clearfix d-flex">
+                                        <div class="hint-text">Showing <b>5</b> out of <b>25</b> entries</div>
+                                        <ul class="pagination ml-auto" id="pagination"></ul>
+                                        <input type="hidden" value="" id="page" name="page"/>
+                                        <input type="hidden" value="" id="maxPageItem" name="maxPageItem"/>
+                                        <input type="hidden" value="" id="sortName" name="sortName"/>
+                                        <input type="hidden" value="" id="sortBy" name="sortBy"/>
+                                        <input type="hidden" value="" id="type" name="type"/>
+
+                                    </div>
                                 </div>
-                            </div>
-                        </div>  
-                    </div>
+                            </div>  
+                        </div>
+                    </form>
                     <!-- End of Table -->
 
                 </div>
@@ -402,6 +406,52 @@
             </div>
         </div>
 
+        <script>
+            var totalPages = ${model.totalPage};
+            var currentPage = ${model.page};
+            var limit = 2;
+            $(function () {
+                window.pagObj = $('#pagination').twbsPagination({
+                    totalPages: totalPages,
+                    visiblePages: 10,
+                    startPage: currentPage,
+                    onPageClick: function (event, page) {
+                        if (currentPage != page) {
+                            $('#maxPageItem').val(limit);
+                            $('#page').val(page);
+                            $('#sortName').val('product_name');
+                            $('#sortBy').val('desc');
+                            $('#type').val('list');
+                            $('#formSubmit').submit();
+                        }
+                    }
+                });
+            });
+
+            $("#btnDelete").click(function () {
+                var data = {};
+                var ids = $('tbody input[type=checkbox]:checked').map(function () {
+                    return $(this).val();
+                }).get();
+                data['ids'] = ids;
+                deleteNew(data);
+            });
+
+            function deleteNew(data) {
+                $.ajax({
+                    url: '${APIurl}',
+                    type: 'DELETE',
+                    contentType: 'application/json',
+                    data: JSON.stringify(data),
+                    success: function (result) {
+                        window.location.href = "${NewURL}?type=list&maxPageItem=2&page=1&message=delete_success";
+                    },
+                    error: function (error) {
+                        window.location.href = "${NewURL}?type=list&maxPageItem=2&page=1&message=error_system";
+                    }
+                });
+            }
+        </script>
 
         <script>
             $(document).ready(function () {

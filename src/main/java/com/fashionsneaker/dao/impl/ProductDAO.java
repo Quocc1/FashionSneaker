@@ -3,14 +3,22 @@ package com.fashionsneaker.dao.impl;
 import com.fashionsneaker.dao.IProductDAO;
 import com.fashionsneaker.mapper.ProductMapper;
 import com.fashionsneaker.model.ProductModel;
+import com.fashionsneaker.paging.Pageble;
 import java.util.List;
+import org.apache.commons.lang.StringUtils;
 
 public class ProductDAO extends AbstractDAO<ProductModel> implements IProductDAO {
 
     @Override
-    public List<ProductModel> findAll() {
-        String sql = "SELECT * FROM product";
-        return query(sql, new ProductMapper());
+    public List<ProductModel> findAll(Pageble pageble) {
+        StringBuilder sql = new StringBuilder("SELECT * FROM product");
+        if (pageble.getSorter() != null && StringUtils.isNotBlank(pageble.getSorter().getSortName()) && StringUtils.isNotBlank(pageble.getSorter().getSortBy())) {
+            sql.append(" ORDER BY " + pageble.getSorter().getSortName() + " " + pageble.getSorter().getSortBy().toUpperCase() + "");
+        }
+        if (pageble.getOffset() != null && pageble.getLimit() != null) {
+            sql.append(" OFFSET " + pageble.getOffset() + " ROWS FETCH NEXT " + pageble.getLimit() + " ROWS ONLY");
+        }
+        return query(sql.toString(), new ProductMapper());
     }
 
     @Override
@@ -59,5 +67,11 @@ public class ProductDAO extends AbstractDAO<ProductModel> implements IProductDAO
     public void delete(int id) {
         String sql = "DELETE FROM product WHERE id = ?";
         update(sql, id);
+    }
+
+    @Override
+    public int getTotalItem() {
+        String sql = "SELECT count(*) FROM product";
+        return count(sql);
     }
 }
