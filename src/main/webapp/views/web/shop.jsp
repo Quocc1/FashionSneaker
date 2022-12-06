@@ -40,12 +40,12 @@
                 <div class="container">
                     <div class="row">
                         <div class="col">
-                            <a href="home" style="color: #000">Home > </a>
-                            <span style="color: #B7B7B7">Shop</span>
+                            <a href="home" style="color: #000">Trang Chủ > </a>
+                            <span style="color: #B7B7B7">Cửa Hàng</span>
                         </div>
                         <div class="col d-flex justify-content-end">
                             <img src="views/web/img/icon/filter.png" style="width: 28px">
-                            <span style="color: #000">Filter</span>
+                            <span style="color: #000">Bộ Lọc</span>
                         </div>
                     </div>
                     <div class="row">
@@ -294,7 +294,7 @@
             <div class="h-100 d-flex align-items-center justify-content-center">
                 <div class="search-close-switch">+</div>
                 <form class="search-model-form">
-                    <input type="text" id="search-input" placeholder="Search here.....">
+                    <input type="text" id="search-input" placeholder="Tìm Kiếm Tại Đây.....">
                 </form>
             </div>
         </div>

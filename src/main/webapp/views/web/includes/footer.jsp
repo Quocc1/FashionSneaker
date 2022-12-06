@@ -16,8 +16,7 @@
                     <h6>SẢN PHẨM</h6>
                     <ul>
                         <li><a href="shop">Giày nam</a></li>
-                        <li><a href="shop">Giày nữ</a></li>
-                        <li><a href="shop">Phụ kiện</a></li>
+                        <li><a href="shop">Giày nữ</a></li>                       
                         <li><a href="shop">Sale-off</a></li>
                     </ul>
                 </div>
@@ -49,14 +48,14 @@
                     <div class="footer__newslatter">
                         <!--<p>Hotline: 0906596432 <br> <br> Email góp ý </p>
                         <form action="#">
-                            <input type="text" placeholder="Your email">
+                            <input type="text" placeholder="Email Của Bạn">
                             <button type="submit"><span class="icon_mail_alt"></span></button>
                         </form> -->
                         <ul>
                         <li><a href="home">Hotline: 0906596432</a></li>
                         <li><a href="home"></a>Email góp ý</li>
                         <form action="#">
-                            <input type="text" placeholder="Your email">
+                            <input type="text" placeholder="Email Của Bạn">
                             <button type="submit"><span class="icon_mail_alt"></span></button>
                         </form>
                     </ul>

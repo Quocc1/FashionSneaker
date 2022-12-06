@@ -76,7 +76,7 @@
 
                     <div class="row d-flex justify-content-center">
                         <div class="col-lg-8">
-                            <h2 class="fw-bold mb-5 text-black">Sign In</h2>
+                            <h2 class="fw-bold mb-5 text-black">Đăng Nhập</h2>
                             <form>
                                 <!-- 2 column grid layout with text inputs for the first and last names -->
 
@@ -84,22 +84,22 @@
                                 <!-- Email input -->
                                 <div class="form-outline mb-4">
                                     <input type="email" id="form3Example3" class="form-control" />
-                                    <label class="form-label" for="form3Example3">Email address</label>
+                                    <label class="form-label" for="form3Example3">Email</label>
                                 </div>
 
                                 <!-- Password input -->
                                 <div class="form-outline mb-4">
                                     <input type="password" id="form3Example4" class="form-control" />
-                                    <label class="form-label" for="form3Example4">Password</label>
+                                    <label class="form-label" for="form3Example4">Mật Khẩu</label>
                                 </div>
                                 <!-- Submit button -->
                                 <button type="submit" class="btn btn-primary btn-block mb-4">
-                                    Sign in
+                                    Đăng Nhập
                                 </button>
 
                                 <!-- Register buttons -->
                                 <div class="text-center">
-                                    <p class="text-black">If you don't have a account ? <a href="signup" class="text-primary">Sign up.</a> </p>
+                                    <p class="text-black">Nếu Bạn Chưa Có Tài Khoản ?<a href="signup" class="text-primary">   Đăng Kí.</a> </p>
                                 </div>
                             </form>
                         </div>

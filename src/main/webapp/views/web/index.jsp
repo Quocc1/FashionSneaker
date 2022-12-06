@@ -81,9 +81,9 @@ contentType="text/html" pageEncoding="UTF-8"%>
         <div class="row">
           <div class="col-lg-12">
             <ul class="filter__controls">
-              <li class="active" data-filter="*">Best Sellers</li>
-              <li data-filter=".new-arrivals">New Arrivals</li>
-              <li data-filter=".hot-sales">Hot Sales</li>
+              <li class="active" data-filter="*">Bán Chạy Nhất</li>
+              <li data-filter=".new-arrivals">Sản Phẩm Mới</li>
+              <li data-filter=".hot-sales">Giảm Giá Sốc</li>
             </ul>
           </div>
         </div>
@@ -233,7 +233,7 @@ contentType="text/html" pageEncoding="UTF-8"%>
       <div class="h-100 d-flex align-items-center justify-content-center">
         <div class="search-close-switch">+</div>
         <form class="search-model-form">
-          <input type="text" id="search-input" placeholder="Search here....." />
+          <input type="text" id="search-input" placeholder="Tìm Kiếm Tại Đây....." />
         </form>
       </div>
     </div>

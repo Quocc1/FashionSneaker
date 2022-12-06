@@ -7,8 +7,8 @@
             <div class="row">
                 <div class="header__top__right ml-auto">
                     <div class="header__top__links">
-                        <a href="signin">Sign in</a>
-                        <a href="signup">Sign up</a>
+                        <a href="signin">Đăng Nhập</a>
+                        <a href="signup">Đăng Kí</a>
                     </div>
                 </div>
             </div>
@@ -25,8 +25,8 @@
                 <div class="col-lg-6 col-md-6">
                     <nav class="header__menu mobile-menu">
                         <ul>
-                            <li><a href="home" class="text-black">Home</a></li>
-                            <li><a href="shop" class="text-black">Shop</a></li>
+                            <li><a href="home" class="text-black">Trang Chủ</a></li>
+                            <li><a href="shop" class="text-black">Cửa Hàng</a></li>
                             <li><a href="shop" class="text-black">Nam</a></li>
                             <li><a href="shop" class="text-black">Nữ</a></li>
                         </ul>
