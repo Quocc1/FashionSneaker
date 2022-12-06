@@ -1,11 +1,7 @@
 package com.fashionsneaker.model;
 
-import java.util.ArrayList;
-import java.util.List;
+public class ProductModel extends AbstractModel<ProductModel>{
 
-public class ProductModel {
-
-    private int id;
     private int category_id;
     private int brand_id;
     private String product_name;
@@ -14,11 +10,7 @@ public class ProductModel {
     private String size;
     private int quantity;
     private String img_url;
-    private List<ProductModel> listResult = new ArrayList<>();
 
-    public int getId() {
-        return id;
-    }
 
     public int getCategory_id() {
         return category_id;
@@ -52,14 +44,6 @@ public class ProductModel {
         return img_url;
     }
 
-    public List<ProductModel> getListResult() {
-        return listResult;
-    }
-
-    public void setId(int id) {
-        this.id = id;
-    }
-
     public void setCategory_id(int category_id) {
         this.category_id = category_id;
     }
@@ -90,10 +74,6 @@ public class ProductModel {
 
     public void setImg_url(String img_url) {
         this.img_url = img_url;
-    }
-
-    public void setListResult(List<ProductModel> listResult) {
-        this.listResult = listResult;
     }
 
 }
