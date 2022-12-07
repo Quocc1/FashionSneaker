@@ -1,11 +1,34 @@
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 
 <!-- Header Section Begin -->
 <header class="header text-white">
+    <div class="header__top">
+        <div class="container">
+            <div class="row">
+                <div class="header__top__right ml-auto">
+                    <c:choose>
+                        <c:when test="${empty user}">
+                            <div class="header__top__links">
+                                <a href="signin">Đăng Nhập</a>
+                                <a href="signup">Đăng Kí</a>
+                            </div>
+                        </c:when>    
+                        <c:otherwise>
+                            <div class="header__top__links">
+                                <a href="profile">Xin chào ${user.full_name}</a>
+                                <a href="signout" class="text-danger">Đăng Xuất</a>
+                            </div>
+                        </c:otherwise>
+                    </c:choose>
+                </div>
+            </div>
+        </div>
+    </div>
     <div class="container-fluid"  style="background-color: #FFFFFF">
         <div class="container-fluid">
             <div class="row">
-                 <div class="col-lg-3 col-md-3">
+                <div class="col-lg-3 col-md-3">
                     <div class="Logo Web ml-4">
                         <a href="home"><img src="views/web/img/Logo Web.png" alt=""></a>
                     </div>
@@ -22,8 +45,9 @@
                 </div>
                 <div class="col-lg-3 col-md-3">
                     <div class="header__nav__option">
-                        <a href="shopping-cart.jsp"><img src="views/web/img/icon/Artboard 3.png" alt="" style="width: 18px"> <span>0</span></a>   
-                        <a href="signin" style="margin-left: 1rem" >Sign in</a>
+                        <a href="#" class="search-switch"><img src="views/web/img/icon/search.png" alt="" style="width: 18px"></a>
+                        <a href="cart"><img src="views/web/img/icon/cart.png" alt="" style="width: 18px"> <span>0</span></a>   
+                        <div class="price text-black">$0.00</div>
                     </div>
                 </div>
 
