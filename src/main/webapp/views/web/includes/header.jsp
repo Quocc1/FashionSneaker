@@ -1,3 +1,4 @@
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 
 <!-- Header Section Begin -->
@@ -6,10 +7,20 @@
         <div class="container">
             <div class="row">
                 <div class="header__top__right ml-auto">
-                    <div class="header__top__links">
-                        <a href="signin">Đăng Nhập</a>
-                        <a href="signup">Đăng Kí</a>
-                    </div>
+                    <c:choose>
+                        <c:when test="${empty user}">
+                            <div class="header__top__links">
+                                <a href="signin">Đăng Nhập</a>
+                                <a href="signup">Đăng Kí</a>
+                            </div>
+                        </c:when>    
+                        <c:otherwise>
+                            <div class="header__top__links">
+                                <a href="profile">Xin chào ${user.full_name}</a>
+                                <a href="signout" class="text-danger">Đăng Xuất</a>
+                            </div>
+                        </c:otherwise>
+                    </c:choose>
                 </div>
             </div>
         </div>

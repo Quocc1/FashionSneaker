@@ -1,9 +1,4 @@
-<%-- 
-    Document   : signin
-    Created on : Nov 2, 2022, 10:33:54 PM
-    Author     : Asus
---%>
-
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %> 
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
@@ -57,67 +52,51 @@
     <body>
         <!-- Header Section Begin -->
         <jsp:include page="./includes/header.jsp"></jsp:include>
-        <!-- Header Section End -->
-        <!-- Section: Design Block -->
-        <!-- Section: Design Block -->
-        <section class="text-center">
-            <!-- Background image -->
-            <div class="p-5 bg-image" style="
-                 background-image: url('https://mdbootstrap.com/img/new/textures/full/171.jpg');
-                 height: 300px;
-                 "></div>
-            <!-- Background image -->
+            <!-- Header Section End -->
+            <!-- Section: Design Block -->
+            <!-- Section: Design Block -->
+            <section class="text-center">
+                <!-- Background image -->
+                <div class="p-5 bg-image" style="
+                     background-image: url('https://mdbootstrap.com/img/new/textures/full/171.jpg');
+                     height: 300px;
+                     "></div>
+                <!-- Background image -->
 
-            <div class="card mx-4 mx-md-5 shadow-5-strong" style="
-                 margin-top: -100px;
-                 background: hsla(0, 0%, 100%, 0.8);
-                 backdrop-filter: blur(30px);
-                 ">
-                <div class="card-body py-5 px-md-5">
-
-                    <div class="row d-flex justify-content-center">
-                        <div class="col-lg-8">
-                            <h2 class="fw-bold mb-5 text-black">Đăng Kí</h2>
-                            <form>
-                                <!-- 2 column grid layout with text inputs for the first and last names -->
-                                <div class="row">
-                                    <div class="col-md-6 mb-4">
-                                        <div class="form-outline">
-                                            <input type="text" id="form3Example1" class="form-control" />
-                                            <label class="form-label" for="form3Example1">Họ Và Tên Đệm</label>
-                                        </div>
-                                    </div>
-                                    <div class="col-md-6 mb-4">
-                                        <div class="form-outline">
-                                            <input type="text" id="form3Example2" class="form-control" />
-                                            <label class="form-label" for="form3Example2">Tên</label>
-                                        </div>
-                                    </div>
+                <div class="card mx-4 mx-md-5 shadow-5-strong" style="
+                     margin-top: -100px;
+                     background: hsla(0, 0%, 100%, 0.8);
+                     backdrop-filter: blur(30px);
+                     ">
+                    <div class="card-body py-5 px-md-5">
+                        <div class="row d-flex justify-content-center">
+                            <div class="col-lg-8">
+                                <c:if test="${not empty message}">
+                                <div class="alert alert-${alert}">
+                                    ${message}
                                 </div>
+                            </c:if>
+                            <h2 class="fw-bold mb-5 text-black">Đăng Kí</h2>
+                            <form action="signup" id="formSignup" method="post">
+                                <!-- 2 column grid layout with text inputs for the first and last names -->
+                                <input type="text" id="full_name" name="full_name" placeholder="Họ Và Tên" class="form-control mb-4" />
 
                                 <!-- Email input -->
-                                <div class="form-outline mb-4">
-                                    <input type="email" id="form3Example3" class="form-control" />
-                                    <label class="form-label" for="form3Example3">Email</label>
-                                </div>
+                                <input type="email" id="email" name="email" placeholder="Email" class="form-control mb-4" />
 
                                 <!-- Password input -->
-                                <div class="form-outline mb-4">
-                                    <input type="password" id="form3Example4" class="form-control" />
-                                    <label class="form-label" for="form3Example4">Mật Khẩu</label>
-                                </div>
+                                <input type="password" id="password" name="password" placeholder="Mật Khẩu" class="form-control mb-4" />
                                 <!-- Submit button -->
                                 <button type="submit" class="btn btn-primary btn-block mb-4">
                                     Đăng Kí
                                 </button>
                                 <div class="text-center">
-                                    <p class="text-black">Bạn Đã Có Tài Khoản ?<a href="signin" class="text-primary">   Đăng Nhập.</a> </p>
+                                    <p class="text-black">Bạn Đã Có Tài Khoản? <a href="signin" class="text-primary">Đăng Nhập.</a> </p>
                                 </div>
                             </form>
                         </div>
                     </div>
                 </div>
-            </div>
         </section>
         <!-- Section: Design Block -->
     </body>
