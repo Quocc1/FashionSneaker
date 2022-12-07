@@ -46,34 +46,36 @@
         <jsp:include page="./includes/header.jsp"></jsp:include>
             <!-- Header Section End -->
 
-            <!-- Hero Section Begin -->
-            <section class="hero">
-                <div class="hero__slider owl-carousel">
-                    <div class="hero__items set-bg" data-setbg="views/web/img/hero/Banner.png">
-                        <div class="container">
-                            <div class="row">
-                                <div class="col-xl-5 col-lg-7 col-md-8">
-                                    <div class="hero__text">
-                                        <h2>PASTAS LIVING JOURNEY</h2>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="hero__items set-bg" data-setbg="views/web/img/hero/Banner.png">
-                        <div class="container">
-                            <div class="row">
-                                <div class="col-xl-5 col-lg-7 col-md-8">
-                                    <div class="hero__text">
-                                        <h2>Fall - Winter Collections 2030</h2>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+
+    <!-- Hero Section Begin -->
+    <section class="hero">
+      <div class="hero__slider owl-carousel">
+        <div class="hero__items set-bg" data-setbg="views/web/img/hero/Banner.png">
+          <div class="container">
+            <div class="row">
+              <div class="col-xl-5 col-lg-7 col-md-8">
+                <div class="hero__text">
+                  <h1 class="text-dark">GIVE THE GIFT OF COMFORT</h1>
                 </div>
-            </section>
-            <!-- Hero Section End -->
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="hero__items set-bg" data-setbg="views/web/img/hero/Banner2.png">
+          <div class="container">
+            <div class="row">
+              <div class="col-xl-5 col-lg-7 col-md-8">
+                <div class="hero__text">
+                  <h1 class="text-dark">GIVE THE GIFT OF COMFORT</h1>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div> 
+      </div>
+    </section>
+    <!-- Hero Section End -->
+
 
             <!-- Product Section Begin -->
             <section class="product spad mt-5">
@@ -223,6 +225,7 @@
                 </div>
             </section>
             <!-- Product Section End -->
+
 
             <!-- Footer Section Begin -->
         <jsp:include page="./includes/footer.jsp"></jsp:include>

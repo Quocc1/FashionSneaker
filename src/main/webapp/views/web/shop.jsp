@@ -278,7 +278,9 @@
                     <div class="row">
                         <div class="col-lg-12">
                             <div class="product__pagination">
+
                                 <a class="active" href="#">1</a>                                
+
                             </div>
                         </div>
                     </div>
