@@ -54,23 +54,23 @@ contentType="text/html" pageEncoding="UTF-8"%>
             <div class="row">
               <div class="col-xl-5 col-lg-7 col-md-8">
                 <div class="hero__text">
-                  <h2>PASTAS LIVING JOURNEY</h2>
+                  <h1 class="text-dark">GIVE THE GIFT OF COMFORT</h1>
                 </div>
               </div>
             </div>
           </div>
         </div>
-        <div class="hero__items set-bg" data-setbg="views/web/img/hero/Banner.png">
+        <div class="hero__items set-bg" data-setbg="views/web/img/hero/Banner2.png">
           <div class="container">
             <div class="row">
               <div class="col-xl-5 col-lg-7 col-md-8">
                 <div class="hero__text">
-                  <h2>Fall - Winter Collections 2030</h2>
+                  <h1 class="text-dark">GIVE THE GIFT OF COMFORT</h1>
                 </div>
               </div>
             </div>
           </div>
-        </div>
+        </div> 
       </div>
     </section>
     <!-- Hero Section End -->
@@ -81,9 +81,9 @@ contentType="text/html" pageEncoding="UTF-8"%>
         <div class="row">
           <div class="col-lg-12">
             <ul class="filter__controls">
-              <li class="active" data-filter="*">Best Sellers</li>
-              <li data-filter=".new-arrivals">New Arrivals</li>
-              <li data-filter=".hot-sales">Hot Sales</li>
+              <li class="active" data-filter="*">Bán Chạy Nhất</li>
+              <li data-filter=".new-arrivals">Sản Phẩm Mới</li>
+              <li data-filter=".hot-sales">Giảm Giá Sốc</li>
             </ul>
           </div>
         </div>

@@ -405,11 +405,11 @@
                     <div class="row">
                         <div class="col-lg-12">
                             <div class="product__pagination">
-                                <a class="active" href="#">1</a>
+                                <a class="active" href="shop">1</a>
                                 <a href="#">2</a>
                                 <a href="#">3</a>
                                 <span>...</span>
-                                <a href="#">21</a>
+                                <a href="#">10</a>
                             </div>
                         </div>
                     </div>
