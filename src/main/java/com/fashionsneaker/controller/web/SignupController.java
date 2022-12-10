@@ -32,6 +32,7 @@ public class SignupController extends HttpServlet {
 
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+        request.setCharacterEncoding("UTF-8");
         UserModel model = FormUtil.toModel(UserModel.class, request);
         UserModel userModel = userService.save(model);
         if (userModel != null) {

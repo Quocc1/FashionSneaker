@@ -4,8 +4,11 @@ import com.fashionsneaker.model.ProductModel;
 import com.fashionsneaker.paging.PageRequest;
 import com.fashionsneaker.paging.Pageble;
 import com.fashionsneaker.service.IProductService;
+import com.fashionsneaker.service.ICategoryService;
+import com.fashionsneaker.service.IBrandService;
 import com.fashionsneaker.sort.Sorter;
 import com.fashionsneaker.utils.FormUtil;
+import com.fashionsneaker.utils.MessageUtil;
 import java.io.IOException;
 import javax.inject.Inject;
 import javax.servlet.RequestDispatcher;
@@ -21,23 +24,38 @@ public class ProductController extends HttpServlet {
     @Inject
     private IProductService productService;
 
+    @Inject
+    private ICategoryService categoryService;
+
+    @Inject
+    private IBrandService brandService;
+
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        ProductModel model = FormUtil.toModel(ProductModel.class, request);
+        ProductModel product = FormUtil.toModel(ProductModel.class, request);
         String view = "";
-        if (model.getType().equals("list")) {
-            Pageble pageble = new PageRequest(model.getPage(), model.getMaxPageItem(),
-                    new Sorter(model.getSortName(), model.getSortBy()));
-            model.setListResult(productService.findAll(pageble));
-            model.setTotalItem(productService.getTotalItem());
-            model.setTotalPage((int) Math.ceil((double) model.getTotalItem() / model.getMaxPageItem()));
+        if (product.getType().equals("list")) {
+            Pageble pageble = new PageRequest(product.getPage(), product.getMaxPageItem(),
+                    new Sorter(product.getSortName(), product.getSortBy()));
+            product.setListResult(productService.findAll(pageble));
+            product.setTotalItem(productService.getTotalItem());
+            product.setTotalPage((int) Math.ceil((double) product.getTotalItem() / product.getMaxPageItem()));
             view = "/views/admin/product.jsp";
+        } else if (product.getType().equals("edit")) {
+            if (product.getId() != null) {
+                product = productService.findById(product.getId());
+            }
+            request.setAttribute("categories", categoryService.findAll());
+            request.setAttribute("brands", brandService.findAll());
+            view = "/views/admin/edit-product.jsp";
         }
-        request.setAttribute("model", model);
+        MessageUtil.showMessage(request);
+        request.setAttribute("product", product);
         RequestDispatcher rd = request.getRequestDispatcher(view);
         rd.forward(request, response);
     }
 
+    @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 
     }

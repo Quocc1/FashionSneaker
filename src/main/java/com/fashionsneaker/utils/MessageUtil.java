@@ -10,16 +10,16 @@ public class MessageUtil {
 			String alert = "";
 			String message = request.getParameter("message");
 			if (message.equals("insert_success")) {
-				messageResponse = "Insert success";
+				messageResponse = "Thêm Thành Công";
 				alert = "success";
 			} else if (message.equals("update_success")) {
-				messageResponse = "Update success";
+				messageResponse = "Cập Nhật Thành Công";
 				alert = "success";
 			} else if (message.equals("delete_success")) {
-				messageResponse = "Delete success";
+				messageResponse = "Xóa Thành Công";
 				alert = "success";
 			} else if (message.equals("error_system")) {
-				messageResponse = "Error system";
+				messageResponse = "Lỗi, Không Thể Hoàn Thành Tác Vụ";
 				alert = "danger";
 			}
 			request.setAttribute("messageResponse", messageResponse);

@@ -18,6 +18,16 @@ public class ProductService implements IProductService {
     }
 
     @Override
+    public ProductModel findById(int id) {
+        return productDAO.findById(id);
+    }
+
+    @Override
+    public List<ProductModel> findByCategoryId(int id) {
+        return productDAO.findByCategoryId(id);
+    }
+
+    @Override
     public ProductModel save(ProductModel productModel) {
         int newId = productDAO.save(productModel);
         return productDAO.findById(newId);

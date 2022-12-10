@@ -8,6 +8,10 @@ public interface IProductService {
 
     List<ProductModel> findAll(Pageble pageble);
 
+    ProductModel findById(int id);
+
+    List<ProductModel> findByCategoryId(int id);
+
     ProductModel save(ProductModel productModel);
 
     ProductModel update(ProductModel productModel);

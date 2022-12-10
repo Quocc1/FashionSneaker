@@ -44,266 +44,39 @@
         <!-- Page Wrapper -->
         <div id="wrapper">
 
-            <ul class="navbar-nav bg-gradient-primary sidebar sidebar-dark accordion" id="accordionSidebar">
+            <!-- Sidebar -->
+            <jsp:include page="./includes/sidebar.jsp"></jsp:include>
+                <!-- End of Sidebar -->
 
-                <!-- Sidebar - Brand -->
-                <a class="sidebar-brand d-flex align-items-center justify-content-center" href="admin-home">
-                    <div class="sidebar-brand-text mx-3">Fashion Sneaker</div>
-                </a>
+                <!-- Content Wrapper -->
+                <div id="content-wrapper" class="d-flex flex-column">
 
-                <!-- Divider -->
-                <hr class="sidebar-divider my-0">
+                    <!-- Main Content -->
+                    <div id="content">
 
-                <!-- Nav Item - Dashboard -->
-                <li class="nav-item active">
-                    <a class="nav-link" href="admin-home">
-                        <i class="fas fa-fw fa-tachometer-alt"></i>
-                        <span>Trang chủ</span></a>
-                </li>
+                        <!-- Topbar -->
+                    <jsp:include page="./includes/header.jsp"></jsp:include>
+                        <!-- End of Topbar -->
 
-                <!-- Nav Item - Charts -->
-                <li class="nav-item">
-                    <a class="nav-link" href="admin-chart">
-                        <i class="fas fa-fw fa-chart-area"></i>
-                        <span>Biểu đồ</span></a>
-                </li>
 
-                <!-- Nav Item - Tables -->
-                <li class="nav-item">
-                    <a class="nav-link" href="admin-product">
-                        <i class="fas fa-fw fa-table"></i>
-                        <span>Sản phẩm</span></a>
-                </li>
-
-                <li class="nav-item">
-                    <a class="nav-link" href="admin-customer">
-                        <i class="fas fa-fw fa-table"></i>
-                        <span>Khách hàng</span></a>
-                </li>
-
-                <li class="nav-item">
-                    <a class="nav-link" href="admin-receipt">
-                        <i class="fas fa-fw fa-table"></i>
-                        <span>Hóa đơn</span></a>
-                </li>
-
-                <li class="nav-item">
-                    <a class="nav-link" href="admin-brand">
-                        <i class="fas fa-fw fa-table"></i>
-                        <span>Thương hiệu</span></a>
-                </li>
-
-                <!-- Divider -->
-                <hr class="sidebar-divider d-none d-md-block">
-
-                <!-- Sidebar Toggler (Sidebar) -->
-                <div class="text-center d-none d-md-inline">
-                    <button class="rounded-circle border-0" id="sidebarToggle"></button>
-                </div>
-            </ul>
-            <!-- End of Sidebar -->
-
-            <!-- Content Wrapper -->
-            <div id="content-wrapper" class="d-flex flex-column">
-
-                <!-- Main Content -->
-                <div id="content">
-
-                    <!-- Topbar -->
-                    <nav class="navbar navbar-expand navbar-light bg-white topbar mb-4 static-top shadow">
-
-                        <!-- Sidebar Toggle (Topbar) -->
-                        <button id="sidebarToggleTop" class="btn btn-link d-md-none rounded-circle mr-3">
-                            <i class="fa fa-bars"></i>
-                        </button>
-
-                        <!-- Topbar Navbar -->
-                        <ul class="navbar-nav ml-auto">
-
-                            <!-- Nav Item - Search Dropdown (Visible Only XS) -->
-                            <li class="nav-item dropdown no-arrow d-sm-none">
-                                <a class="nav-link dropdown-toggle" href="views/admin/#" id="searchDropdown" role="button"
-                                   data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                    <i class="fas fa-search fa-fw"></i>
-                                </a>
-                                <!-- Dropdown - Messages -->
-                                <div class="dropdown-menu dropdown-menu-right p-3 shadow animated--grow-in"
-                                     aria-labelledby="searchDropdown">
-                                    <form class="form-inline mr-auto w-100 navbar-search">
-                                        <div class="input-group">
-                                            <input type="text" class="form-control bg-light border-0 small"
-                                                   placeholder="Search for..." aria-label="Search"
-                                                   aria-describedby="basic-addon2">
-                                            <div class="input-group-append">
-                                                <button class="btn btn-primary" type="button">
-                                                    <i class="fas fa-search fa-sm"></i>
-                                                </button>
+                        <!-- Start of Table -->
+                        <form action="admin-product" id="formSubmit" method="get">
+                            <div class="container-xl">
+                                <div class="table-responsive">
+                                    <div class="table-wrapper">
+                                        <div class="table-title">
+                                        <c:if test="${not empty messageResponse}">
+                                            <div class="alert alert-${alert}">
+                                                ${messageResponse}
                                             </div>
-                                        </div>
-                                    </form>
-                                </div>
-                            </li>
-
-                            <!-- Nav Item - Alerts -->
-                            <li class="nav-item dropdown no-arrow mx-1">
-                                <a class="nav-link dropdown-toggle" href="views/admin/#" id="alertsDropdown" role="button"
-                                   data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                    <i class="fas fa-bell fa-fw"></i>
-                                    <!-- Counter - Alerts -->
-                                    <span class="badge badge-danger badge-counter">3+</span>
-                                </a>
-                                <!-- Dropdown - Alerts -->
-                                <div class="dropdown-list dropdown-menu dropdown-menu-right shadow animated--grow-in"
-                                     aria-labelledby="alertsDropdown">
-                                    <h6 class="dropdown-header">
-                                        Alerts Center
-                                    </h6>
-                                    <a class="dropdown-item d-flex align-items-center" href="views/admin/#">
-                                        <div class="mr-3">
-                                            <div class="icon-circle bg-primary">
-                                                <i class="fas fa-file-alt text-white"></i>
-                                            </div>
-                                        </div>
-                                        <div>
-                                            <div class="small text-gray-500">December 12, 2019</div>
-                                            <span class="font-weight-bold">A new monthly report is ready to download!</span>
-                                        </div>
-                                    </a>
-                                    <a class="dropdown-item d-flex align-items-center" href="views/admin/#">
-                                        <div class="mr-3">
-                                            <div class="icon-circle bg-success">
-                                                <i class="fas fa-donate text-white"></i>
-                                            </div>
-                                        </div>
-                                        <div>
-                                            <div class="small text-gray-500">December 7, 2019</div>
-                                            $290.29 has been deposited into your account!
-                                        </div>
-                                    </a>
-                                    <a class="dropdown-item d-flex align-items-center" href="views/admin/#">
-                                        <div class="mr-3">
-                                            <div class="icon-circle bg-warning">
-                                                <i class="fas fa-exclamation-triangle text-white"></i>
-                                            </div>
-                                        </div>
-                                        <div>
-                                            <div class="small text-gray-500">December 2, 2019</div>
-                                            Spending Alert: We've noticed unusually high spending for your account.
-                                        </div>
-                                    </a>
-                                    <a class="dropdown-item text-center small text-gray-500" href="views/admin/#">Show All Alerts</a>
-                                </div>
-                            </li>
-
-                            <!-- Nav Item - Messages -->
-                            <li class="nav-item dropdown no-arrow mx-1">
-                                <a class="nav-link dropdown-toggle" href="views/admin/#" id="messagesDropdown" role="button"
-                                   data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                    <i class="fas fa-envelope fa-fw"></i>
-                                    <!-- Counter - Messages -->
-                                    <span class="badge badge-danger badge-counter">7</span>
-                                </a>
-                                <!-- Dropdown - Messages -->
-                                <div class="dropdown-list dropdown-menu dropdown-menu-right shadow animated--grow-in"
-                                     aria-labelledby="messagesDropdown">
-                                    <h6 class="dropdown-header">
-                                        Message Center
-                                    </h6>
-                                    <a class="dropdown-item d-flex align-items-center" href="views/admin/#">
-                                        <div class="dropdown-list-image mr-3">
-                                            <img class="rounded-circle" src="views/admin/img/undraw_profile_1.svg"
-                                                 alt="...">
-                                            <div class="status-indicator bg-success"></div>
-                                        </div>
-                                        <div class="font-weight-bold">
-                                            <div class="text-truncate">Hi there! I am wondering if you can help me with a
-                                                problem I've been having.</div>
-                                            <div class="small text-gray-500">Emily Fowler · 58m</div>
-                                        </div>
-                                    </a>
-                                    <a class="dropdown-item d-flex align-items-center" href="views/admin/#">
-                                        <div class="dropdown-list-image mr-3">
-                                            <img class="rounded-circle" src="views/admin/img/undraw_profile_2.svg"
-                                                 alt="...">
-                                            <div class="status-indicator"></div>
-                                        </div>
-                                        <div>
-                                            <div class="text-truncate">I have the photos that you ordered last month, how
-                                                would you like them sent to you?</div>
-                                            <div class="small text-gray-500">Jae Chun · 1d</div>
-                                        </div>
-                                    </a>
-                                    <a class="dropdown-item d-flex align-items-center" href="views/admin/#">
-                                        <div class="dropdown-list-image mr-3">
-                                            <img class="rounded-circle" src="views/admin/img/undraw_profile_3.svg"
-                                                 alt="...">
-                                            <div class="status-indicator bg-warning"></div>
-                                        </div>
-                                        <div>
-                                            <div class="text-truncate">Last month's report looks great, I am very happy with
-                                                the progress so far, keep up the good work!</div>
-                                            <div class="small text-gray-500">Morgan Alvarez · 2d</div>
-                                        </div>
-                                    </a>
-                                    <a class="dropdown-item d-flex align-items-center" href="views/admin/#">
-                                        <div class="dropdown-list-image mr-3">
-                                            <img class="rounded-circle" src="https://source.unsplash.com/Mv9hjnEUHR4/60x60"
-                                                 alt="...">
-                                            <div class="status-indicator bg-success"></div>
-                                        </div>
-                                        <div>
-                                            <div class="text-truncate">Am I a good boy? The reason I ask is because someone
-                                                told me that people say this to all dogs, even if they aren't good...</div>
-                                            <div class="small text-gray-500">Chicken the Dog · 2w</div>
-                                        </div>
-                                    </a>
-                                    <a class="dropdown-item text-center small text-gray-500" href="views/admin/#">Read More Messages</a>
-                                </div>
-                            </li>
-
-                            <div class="topbar-divider d-none d-sm-block"></div>
-
-                            <!-- Nav Item - User Information -->
-                            <li class="nav-item dropdown no-arrow">
-                                <a class="nav-link dropdown-toggle" href="views/admin/#" id="userDropdown" role="button"
-                                   data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                    <span class="mr-2 d-none d-lg-inline text-gray-600 small">Douglas McGee</span>
-                                    <img class="img-profile rounded-circle"
-                                         src="views/admin/img/undraw_profile.svg">
-                                </a>
-                                <!-- Dropdown - User Information -->
-                                <div class="dropdown-menu dropdown-menu-right shadow animated--grow-in"
-                                     aria-labelledby="userDropdown">
-                                    <a class="dropdown-item" href="views/admin/#">
-                                        <i class="fas fa-user fa-sm fa-fw mr-2 text-gray-400"></i>
-                                        Profile
-                                    </a>
-                                    <div class="dropdown-divider"></div>
-                                    <a class="dropdown-item text-danger" href="signin" data-toggle="modal" data-target="#logoutModal">
-                                        <i class="fas fa-sign-out-alt fa-sm fa-fw mr-2"></i>
-                                        Logout
-                                    </a>
-                                </div>
-                            </li>
-
-                        </ul>
-
-                    </nav>
-                    <!-- End of Topbar -->
-
-
-                    <!-- Start of Table -->
-                    <form action="AdminProductController" id="formSubmit" method="get">
-                        <div class="container-xl">
-                            <div class="table-responsive">
-                                <div class="table-wrapper">
-                                    <div class="table-title">
+                                        </c:if>
                                         <div class="row">
-                                            <div class="col-sm-8"><h2>Customer <b>Details</b></h2></div>
-                                            <div class="col-sm-4">
-                                                <div class="search-box">
+                                            <div class="col-sm-8"><h2><b>Thông Tin Sản Phẩm</b></h2></div>
+                                            <div class="col-sm-4 d-flex">
+                                                <a href="admin-product?type=edit" class="btn btn-primary" id="btnInsert" title="Thêm" data-toggle="tooltip">Thêm Sản Phẩm</a>
+                                                <div class="search-box ml-3">
                                                     <i class="material-icons">&#xE8B6;</i>
-                                                    <input type="text" class="form-control" placeholder="Search&hellip;">
+                                                    <input type="text" class="form-control" placeholder="Tìm Theo Tên&hellip;">
                                                 </div>
                                             </div>
                                         </div>
@@ -311,24 +84,25 @@
                                     <table class="table table-striped table-hover table-bordered">
                                         <thead>
                                             <tr>
-                                                <th>Id</th><i class="fa fa-sort"></i>
-                                        <th class="col-1">Category</th>
-                                        <th class="col-1">Brand</th>
-                                        <th>Name</th>
-                                        <th>Description</th>
-                                        <th>Price</th>                                           
-                                        <th>Size</th>
-                                        <th class="col-1">Quantity</th>
-                                        <th>Image</th>
-                                        <th>Actions</th>
-                                        </tr>
+                                                <!--<i class="fa fa-sort"></i>-->
+                                                <th>Id</th>
+                                                <th class="col-1">Category</th>
+                                                <th class="col-1">Brand</th>
+                                                <th>Name</th>
+                                                <th>Description</th>
+                                                <th>Price</th>                                           
+                                                <th>Size</th>
+                                                <th class="col-1">Quantity</th>
+                                                <th>Image</th>
+                                                <th>Actions</th>
+                                            </tr>
                                         </thead>
                                         <tbody>
-                                            <c:forEach var="item" items="${model.listResult}">
+                                            <c:forEach var="item" items="${product.listResult}">
                                                 <tr>
                                                     <td>${item.id}</td>
-                                                    <td>${item.category_id}</td>
-                                                    <td>${item.brand_id}</td>
+                                                    <td>${item.category_name}</td>
+                                                    <td>${item.brand_name}</td>
                                                     <td>${item.product_name}</td>
                                                     <td>${item.description}</td>
                                                     <td>${item.price}</td>
@@ -336,9 +110,8 @@
                                                     <td>${item.quantity}</td>
                                                     <td>${item.img_url}</td>
                                                     <td>
-                                                        <a href="#" class="view" title="View" data-toggle="tooltip"><i class="material-icons">&#xE417;</i></a>
-                                                        <a href="#" class="edit" title="Edit" data-toggle="tooltip"><i class="material-icons">&#xE254;</i></a>
-                                                        <a href="#" class="delete" title="Delete" data-toggle="tooltip"><i class="material-icons">&#xE872;</i></a>
+                                                        <a href="admin-product?type=edit&id=${item.id}" class="btn" id="btnEdit" title="Sửa" data-toggle="tooltip"><i class="material-icons edit">&#xE254;</i></a>
+                                                        <button type="button" class="btn" id="btnDelete" value="${item.id}" title="Xóa" data-toggle="tooltip"><i class="material-icons delete">&#xE872;</i></button>
                                                     </td>
                                                 </tr>    
                                             </c:forEach>
@@ -347,7 +120,7 @@
                                         </tbody>
                                     </table>
                                     <div class="clearfix d-flex">
-                                        <div class="hint-text">Showing <b>5</b> out of <b>25</b> entries</div>
+                                        <div class="hint-text">Hiển thị <b>${product.maxPageItem}</b> trên tổng <b>${product.totalItem}</b> sản phẩm</div>
                                         <ul class="pagination ml-auto" id="pagination"></ul>
                                         <input type="hidden" value="" id="page" name="page"/>
                                         <input type="hidden" value="" id="maxPageItem" name="maxPageItem"/>
@@ -366,91 +139,63 @@
                 <!-- End of Main Content -->
 
                 <!-- Footer -->
-                <footer class="sticky-footer bg-white">
-                    <div class="container my-auto">
-                        <div class="copyright text-center my-auto">
-                            <span>Copyright &copy; Your Website 2020</span>
-                        </div>
-                    </div>
-                </footer>
-                <!-- End of Footer -->
+                <jsp:include page="./includes/footer.jsp"></jsp:include>
+                    <!-- End of Footer -->
 
-            </div>
-            <!-- End of Content Wrapper -->
-
-        </div>
-        <!-- End of Page Wrapper -->
-
-        <!-- Scroll to Top Button-->
-        <a class="scroll-to-top rounded" href="#page-top">
-            <i class="fas fa-angle-up"></i>
-        </a>
-
-        <!-- Logout Modal-->
-        <div class="modal fade" id="logoutModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
-             aria-hidden="true">
-            <div class="modal-dialog" role="document">
-                <div class="modal-content">
-                    <div class="modal-header">
-                        <h5 class="modal-title" id="exampleModalLabel">Ready to Leave?</h5>
-                        <button class="close" type="button" data-dismiss="modal" aria-label="Close">
-                            <span aria-hidden="true">×</span>
-                        </button>
-                    </div>
-                    <div class="modal-body">Select "Logout" below if you are ready to end your current session.</div>
-                    <div class="modal-footer">
-                        <button class="btn btn-secondary" type="button" data-dismiss="modal">Cancel</button>
-                        <a class="btn btn-primary" href="login.html">Logout</a>
-                    </div>
                 </div>
+                <!-- End of Content Wrapper -->
+
             </div>
-        </div>
+            <!-- End of Page Wrapper -->
 
-        <script>
-            var totalPages = ${model.totalPage};
-            var currentPage = ${model.page};
-            var limit = 2;
-            $(function () {
-                window.pagObj = $('#pagination').twbsPagination({
-                    totalPages: totalPages,
-                    visiblePages: 10,
-                    startPage: currentPage,
-                    onPageClick: function (event, page) {
-                        if (currentPage != page) {
-                            $('#maxPageItem').val(limit);
-                            $('#page').val(page);
-                            $('#sortName').val('product_name');
-                            $('#sortBy').val('desc');
-                            $('#type').val('list');
-                            $('#formSubmit').submit();
+            <!-- Scroll to Top Button-->
+            <a class="scroll-to-top rounded" href="#page-top">
+                <i class="fas fa-angle-up"></i>
+            </a>
+
+            <script>
+                var totalPages = ${product.totalPage};
+                var currentPage = ${product.page};
+                var limit = 5;
+                $(function () {
+                    window.pagObj = $('#pagination').twbsPagination({
+                        totalPages: totalPages,
+                        visiblePages: totalPages,
+                        startPage: currentPage,
+                        onPageClick: function (event, page) {
+                            if (currentPage != page) {
+                                $('#maxPageItem').val(limit);
+                                $('#page').val(page);
+                                $('#sortName').val('product.id');
+                                $('#sortBy').val('asc');
+                                $('#type').val('list');
+                                $('#formSubmit').submit();
+                            }
                         }
-                    }
+                    });
                 });
-            });
 
-            $("#btnDelete").click(function () {
-                var data = {};
-                var ids = $('tbody input[type=checkbox]:checked').map(function () {
-                    return $(this).val();
-                }).get();
-                data['ids'] = ids;
-                deleteNew(data);
-            });
-
-            function deleteNew(data) {
-                $.ajax({
-                    url: '${APIurl}',
-                    type: 'DELETE',
-                    contentType: 'application/json',
-                    data: JSON.stringify(data),
-                    success: function (result) {
-                        window.location.href = "${NewURL}?type=list&maxPageItem=2&page=1&message=delete_success";
-                    },
-                    error: function (error) {
-                        window.location.href = "${NewURL}?type=list&maxPageItem=2&page=1&message=error_system";
-                    }
+                $("#btnDelete").click(function () {
+                    var data = {};
+                    var id = $(this).attr("value");
+                    data['id'] = id;
+                    deleteNew(data);
                 });
-            }
+
+                function deleteNew(data) {
+                    $.ajax({
+                        url: 'api-admin-product',
+                        type: 'DELETE',
+                        contentType: 'application/json',
+                        data: JSON.stringify(data),
+                        success: function (result) {
+                            window.location.href = "admin-product?type=list&page=1&maxPageItem=5&sortName=product.id&sortBy=asc&message=delete_success";
+                        },
+                        error: function (error) {
+                            window.location.href = "admin-product?type=list&page=1&maxPageItem=5&sortName=product.id&sortBy=asc&message=error_system";
+                        }
+                    });
+                }
         </script>
 
         <script>

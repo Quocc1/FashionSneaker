@@ -37,9 +37,9 @@
                     <nav class="header__menu mobile-menu">
                         <ul>
                             <li><a href="home" class="text-black">Trang Chủ</a></li>
-                            <li><a href="shop" class="text-black">Cửa Hàng</a></li>
-                            <li><a href="shop" class="text-black">Nam</a></li>
-                            <li><a href="shop" class="text-black">Nữ</a></li>
+                            <li><a href="shop?page=1&maxPageItem=8&sortName=product.id&sortBy=asc" class="text-black">Cửa Hàng</a></li>
+                            <li><a href="shop?page=1&maxPageItem=8&sortName=product.id&sortBy=asc&category_id=1" class="text-black">Nam</a></li>
+                            <li><a href="shop?page=1&maxPageItem=8&sortName=product.id&sortBy=asc&category_id=2" class="text-black">Nữ</a></li>
                         </ul>
                     </nav>
                 </div>

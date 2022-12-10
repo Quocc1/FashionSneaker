@@ -11,7 +11,7 @@ public class ProductDAO extends AbstractDAO<ProductModel> implements IProductDAO
 
     @Override
     public List<ProductModel> findAll(Pageble pageble) {
-        StringBuilder sql = new StringBuilder("SELECT * FROM product");
+        StringBuilder sql = new StringBuilder("SELECT * FROM product JOIN category ON category.id = product.category_id JOIN brand ON brand.id = product.brand_id");
         if (pageble.getSorter() != null && StringUtils.isNotBlank(pageble.getSorter().getSortName()) && StringUtils.isNotBlank(pageble.getSorter().getSortBy())) {
             sql.append(" ORDER BY " + pageble.getSorter().getSortName() + " " + pageble.getSorter().getSortBy().toUpperCase() + "");
         }
@@ -22,7 +22,7 @@ public class ProductDAO extends AbstractDAO<ProductModel> implements IProductDAO
     }
 
     @Override
-    public List<ProductModel> findByCategoryID(int categoryId) {
+    public List<ProductModel> findByCategoryId(int categoryId) {
         String sql = "SELECT * FROM product WHERE category_id = ?";
         return query(sql, new ProductMapper(), categoryId);
     }
@@ -36,7 +36,7 @@ public class ProductDAO extends AbstractDAO<ProductModel> implements IProductDAO
 
     @Override
     public int save(ProductModel productModel) {
-        String sql = "INSERT INTO product VALUES(?, ?, ?, ?, ?, ?, ?, ?)";
+        String sql = "INSERT INTO product(category_id, brand_id, product_name, description, price, size, quantity, img_url) VALUES(?, ?, ?, ?, ?, ?, ?, ?)";
         return insert(sql, productModel.getCategory_id(),
                 productModel.getBrand_id(),
                 productModel.getProduct_name(),

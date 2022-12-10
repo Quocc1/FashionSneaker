@@ -17,7 +17,7 @@ public class AbstractModel<T> {
     private String message;
     private String type;
 
-    public int getId() {
+    public Integer getId() {
         return id;
     }
 

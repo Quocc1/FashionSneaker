@@ -1,11 +1,6 @@
 package com.fashionsneaker.controller.web;
 
-import com.fashionsneaker.model.UserModel;
-import com.fashionsneaker.service.IUserService;
-import com.fashionsneaker.utils.FormUtil;
-import com.fashionsneaker.utils.SessionUtil;
 import java.io.IOException;
-import javax.inject.Inject;
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;

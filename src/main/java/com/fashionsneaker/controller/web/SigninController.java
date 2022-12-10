@@ -23,7 +23,11 @@ public class SigninController extends HttpServlet {
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         UserModel model = (UserModel) SessionUtil.getInstance().getValue(request, "user");
         if (model != null) {
-            response.sendRedirect(request.getContextPath() + "/home");
+            if (model.isIsAdmin()) {
+                response.sendRedirect(request.getContextPath() + "/admin-home");
+            } else {
+                response.sendRedirect(request.getContextPath() + "/home");
+            }
         } else {
             String alert = request.getParameter("alert");
             String message = request.getParameter("message");
@@ -42,10 +46,10 @@ public class SigninController extends HttpServlet {
         model = userService.findByEmailAndPassword(model.getEmail(), model.getPassword());
         if (model != null) {
             SessionUtil.getInstance().putValue(request, "user", model);
-            if (!model.isIsAdmin()) {
-                response.sendRedirect(request.getContextPath() + "/home");
-            } else if (model.isIsAdmin()) {
+            if (model.isIsAdmin()) {
                 response.sendRedirect(request.getContextPath() + "/admin-home");
+            } else {
+                response.sendRedirect(request.getContextPath() + "/home");
             }
         } else {
             response.sendRedirect(request.getContextPath() + "/signin?message=Incorrect Email Or Password&alert=danger");
