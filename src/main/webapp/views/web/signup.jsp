@@ -79,13 +79,13 @@
                             <h2 class="fw-bold mb-5 text-black">Đăng Kí</h2>
                             <form action="signup" id="formSignup" method="post">
                                 <!-- 2 column grid layout with text inputs for the first and last names -->
-                                <input type="text" id="full_name" name="full_name" placeholder="Họ Và Tên" class="form-control mb-4" />
+                                <input type="text" id="full_name" name="full_name" placeholder="Họ Và Tên" required class="form-control mb-4" />
 
                                 <!-- Email input -->
-                                <input type="email" id="email" name="email" placeholder="Email" class="form-control mb-4" />
+                                <input type="email" id="email" name="email" placeholder="Email" required class="form-control mb-4" />
 
                                 <!-- Password input -->
-                                <input type="password" id="password" name="password" placeholder="Mật Khẩu" class="form-control mb-4" />
+                                <input type="password" id="password" name="password" placeholder="Mật Khẩu" required class="form-control mb-4" />
                                 <!-- Submit button -->
                                 <button type="submit" class="btn btn-primary btn-block mb-4">
                                     Đăng Kí

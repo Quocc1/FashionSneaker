@@ -80,10 +80,10 @@
                             <form action="signin" id="formSignin" method="post">
 
                                 <!-- Email input -->
-                                <input type="email" id="email" name="email" placeholder="Email" class="form-control mb-4" />
+                                <input type="email" id="email" name="email" placeholder="Email" required class="form-control mb-4" />
                                 
                                 <!-- Password input -->
-                                <input type="password" id="password" name="password" placeholder="Mật khẩu" class="form-control mb-5" />
+                                <input type="password" id="password" name="password" placeholder="Mật khẩu" required class="form-control mb-5" />
 
                                 <!-- Submit button -->
                                 <button type="submit" class="btn btn-primary btn-block mb-4">

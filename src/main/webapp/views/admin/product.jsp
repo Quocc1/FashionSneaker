@@ -108,7 +108,7 @@
                                                     <td>${item.price}</td>
                                                     <td>${item.size}</td>
                                                     <td>${item.quantity}</td>
-                                                    <td>${item.img_url}</td>
+                                                    <td><image src="ProductImage/${item.img_url}" alt="${item.img_url}" style="max-width: 100px;"></td>
                                                     <td>
                                                         <a href="admin-product?type=edit&id=${item.id}" class="btn" id="btnEdit" title="Sửa" data-toggle="tooltip"><i class="material-icons edit">&#xE254;</i></a>
                                                         <button type="button" class="btn" id="btnDelete" value="${item.id}" title="Xóa" data-toggle="tooltip"><i class="material-icons delete">&#xE872;</i></button>
@@ -127,7 +127,8 @@
                                         <input type="hidden" value="" id="sortName" name="sortName"/>
                                         <input type="hidden" value="" id="sortBy" name="sortBy"/>
                                         <input type="hidden" value="" id="type" name="type"/>
-
+                                        <input type="hidden" value="" id="id" name="id"/>
+                                        <input type="hidden" name="method" value="DELETE">
                                     </div>
                                 </div>
                             </div>  
@@ -176,26 +177,11 @@
                 });
 
                 $("#btnDelete").click(function () {
-                    var data = {};
-                    var id = $(this).attr("value");
-                    data['id'] = id;
-                    deleteNew(data);
+                    $('#id').val($(this).attr("value"));
+                    $('#formSubmit').attr('method', 'post');
+                    $('#formSubmit').attr('action', 'api-admin-product');
+                    $('#formSubmit').submit();
                 });
-
-                function deleteNew(data) {
-                    $.ajax({
-                        url: 'api-admin-product',
-                        type: 'DELETE',
-                        contentType: 'application/json',
-                        data: JSON.stringify(data),
-                        success: function (result) {
-                            window.location.href = "admin-product?type=list&page=1&maxPageItem=5&sortName=product.id&sortBy=asc&message=delete_success";
-                        },
-                        error: function (error) {
-                            window.location.href = "admin-product?type=list&page=1&maxPageItem=5&sortName=product.id&sortBy=asc&message=error_system";
-                        }
-                    });
-                }
         </script>
 
         <script>

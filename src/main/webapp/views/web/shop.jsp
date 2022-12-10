@@ -56,7 +56,7 @@
                     <c:forEach var="item" items="${model.listResult}">
                         <a href="product?id=${item.id}" class="col-lg-3 col-md-6 col-sm-6">
                             <div class="product__item">
-                                <div class="product__item__pic set-bg" data-setbg="views/web/img/product/conver.jpg">
+                                <div class="product__item__pic set-bg" data-setbg="ProductImage/${item.img_url}">
                                 </div>
                                 <div class="product__item__text">
                                     <h6>${item.product_name}</h6>                                  

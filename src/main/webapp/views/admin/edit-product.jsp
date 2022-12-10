@@ -65,11 +65,11 @@
                                         ${messageResponse}
                                     </div>
                                 </c:if>
-                                <form enctype="multipart/form-data" id="formSubmit" action="api-admin-product"<c:if test="${not empty product.id}">method="put"</c:if> <c:if test="${empty product.id}">method="post"</c:if>>
-                                        <div class="form-group">
-                                            <label class="control-label no-padding-right">Thể Loại</label>
-                                            <div class="">
-                                                <select class="form-control" id="category_id" name="category_id">
+                                <form enctype="multipart/form-data" id="formSubmit" action="api-admin-product" method="post">
+                                    <div class="form-group">
+                                        <label class="control-label no-padding-right">Thể Loại</label>
+                                        <div class="">
+                                            <select class="form-control" id="category_id" name="category_id">
                                                 <c:if test="${empty product.id}">
                                                     <option value="">Chọn Thể Loại Giày</option>
                                                     <c:forEach var="category" items="${categories}">
@@ -144,7 +144,7 @@
                                     </div>
                                     <div class="form-group">
                                         <div class="col-sm-12">
-                                            <c:if test="${not empty product.id}">
+                                            <c:if test="${!empty product.id}">
                                                 <input type="button" class="btn btn-white btn-warning btn-bold" value="Cập nhật" id="btnAddOrUpdateNew"/>
                                             </c:if>
                                             <c:if test="${empty product.id}">
@@ -152,7 +152,11 @@
                                             </c:if>
                                         </div>
                                     </div>
+                                    <c:if test="${!empty product.id}">
+                                        <input type="hidden" name="method" value="PUT">
+                                    </c:if>
                                     <input type="hidden" value="${product.id}" id="id" name="id"/>
+                                    <input type="hidden" value="${product.img_url}" id="img_url" name="img_url"/>
                                 </form>
                             </div>
                         </div>

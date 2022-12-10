@@ -3,6 +3,7 @@ package com.fashionsneaker.mapper;
 import com.fashionsneaker.model.UserModel;
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import javax.servlet.http.HttpServletRequest;
 
 public class UserMapper implements RowMapper<UserModel> {
 
@@ -20,6 +21,11 @@ public class UserMapper implements RowMapper<UserModel> {
         } catch (SQLException e) {
             return null;
         }
+    }
+
+    @Override
+    public UserModel mapParam(HttpServletRequest hsr) {
+        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
     }
 
 }

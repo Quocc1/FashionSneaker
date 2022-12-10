@@ -3,6 +3,7 @@ package com.fashionsneaker.mapper;
 import com.fashionsneaker.model.BrandModel;
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import javax.servlet.http.HttpServletRequest;
 
 public class BrandMapper implements RowMapper<BrandModel> {
 
@@ -16,6 +17,11 @@ public class BrandMapper implements RowMapper<BrandModel> {
         } catch (SQLException e) {
             return null;
         }
+    }
+
+    @Override
+    public BrandModel mapParam(HttpServletRequest hsr) {
+        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
     }
 
 }
