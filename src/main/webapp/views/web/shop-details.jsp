@@ -41,7 +41,7 @@
                 <div class="product__details__pic bg-white m-0 p-0">
                     <div class="container">
                         <div class="row w-50 m-auto">
-                            <img src="views/web/img/product/jd1.jpg" alt="">
+                            <img src="ProductImage/${product.img_url}" alt="">
                         </div>
                     </div>
                 </div>
@@ -50,8 +50,8 @@
                         <div class="row d-flex justify-content-center">
                             <div class="col-lg-8">
                                 <div class="product__details__text">
-                                    <h4>${model.product_name}</h4>                                  
-                                <h3>${model.price} VND</h3>                                   
+                                    <h4>${product.product_name}</h4>                                  
+                                <h3>${product.price} VND</h3>                                   
                                 <div class="product__details__option">
                                     <div class="product__details__option__size">
                                         <span>Size:</span>
@@ -108,7 +108,7 @@
                                         <div class="product__details__tab__content">                                          
                                             <div class="product__details__tab__content__item ">
                                                 <h5>Thông Tin Sản Phẩm</h5>
-                                                <p class="text-dark">${model.description}
+                                                <p class="text-dark">${product.description}
                                                 </p>                                                  
                                             </div>                                             
                                         </div>

@@ -20,9 +20,9 @@ public class ProductController extends HttpServlet {
 
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        ProductModel model = FormUtil.toModel(ProductModel.class, request);
-        model = productService.findById(model.getId());
-        request.setAttribute("model", model);
+        ProductModel product = FormUtil.toModel(ProductModel.class, request);
+        product = productService.findById(product.getId());
+        request.setAttribute("product", product);
         RequestDispatcher rd = request.getRequestDispatcher("/views/web/shop-details.jsp");
         rd.forward(request, response);
     }

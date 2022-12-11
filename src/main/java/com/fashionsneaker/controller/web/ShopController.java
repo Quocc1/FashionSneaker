@@ -23,18 +23,18 @@ public class ShopController extends HttpServlet {
 
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        ProductModel model = FormUtil.toModel(ProductModel.class, request);
-        Pageble pageble = new PageRequest(model.getPage(), model.getMaxPageItem(),
-                new Sorter(model.getSortName(), model.getSortBy()));
-        if (model.getCategory_id() != null) {
-            model.setListResult(productService.findByCategoryId(model.getCategory_id()));
-            model.setTotalItem(model.getListResult().size());
+        ProductModel product = FormUtil.toModel(ProductModel.class, request);
+        Pageble pageble = new PageRequest(product.getPage(), product.getMaxPageItem(),
+                new Sorter(product.getSortName(), product.getSortBy()));
+        if (product.getCategory_id() != null) {
+            product.setListResult(productService.findByCategoryId(product.getCategory_id()));
+            product.setTotalItem(product.getListResult().size());
         } else {
-            model.setListResult(productService.findAll(pageble));
-            model.setTotalItem(productService.getTotalItem());
+            product.setListResult(productService.findAll(pageble));
+            product.setTotalItem(productService.getTotalItem());
         }
-        model.setTotalPage((int) Math.ceil((double) model.getTotalItem() / model.getMaxPageItem()));
-        request.setAttribute("model", model);
+        product.setTotalPage((int) Math.ceil((double) product.getTotalItem() / product.getMaxPageItem()));
+        request.setAttribute("product", product);
         RequestDispatcher rd = request.getRequestDispatcher("/views/web/shop.jsp");
         rd.forward(request, response);
     }
