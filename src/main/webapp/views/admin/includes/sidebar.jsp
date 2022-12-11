@@ -44,7 +44,7 @@
     </li>
 
     <li class="nav-item">
-        <a class="nav-link" href="admin-brand">
+        <a class="nav-link" href="admin-brand?type=list&page=1&maxPageItem=10&sortName=id&sortBy=asc">
             <i class="fas fa-fw fa-table"></i>
             <span>Thương hiệu</span></a>
     </li>

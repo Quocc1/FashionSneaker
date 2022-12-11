@@ -3,6 +3,7 @@ package com.fashionsneaker.controller.web;
 import com.fashionsneaker.model.UserModel;
 import com.fashionsneaker.service.IUserService;
 import com.fashionsneaker.utils.FormUtil;
+import com.fashionsneaker.utils.MessageUtil;
 import com.fashionsneaker.utils.SessionUtil;
 import java.io.IOException;
 import javax.inject.Inject;
@@ -29,12 +30,7 @@ public class SigninController extends HttpServlet {
                 response.sendRedirect(request.getContextPath() + "/home");
             }
         } else {
-            String alert = request.getParameter("alert");
-            String message = request.getParameter("message");
-            if (message != null && alert != null) {
-                request.setAttribute("message", message);
-                request.setAttribute("alert", alert);
-            }
+            MessageUtil.showMessage(request);
             RequestDispatcher rd = request.getRequestDispatcher("/views/web/signin.jsp");
             rd.forward(request, response);
         }
@@ -42,17 +38,17 @@ public class SigninController extends HttpServlet {
 
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        UserModel model = FormUtil.toModel(UserModel.class, request);
-        model = userService.findByEmailAndPassword(model.getEmail(), model.getPassword());
-        if (model != null) {
-            SessionUtil.getInstance().putValue(request, "user", model);
-            if (model.isIsAdmin()) {
+        UserModel user = FormUtil.toModel(UserModel.class, request);
+        user = userService.findByEmailAndPassword(user.getEmail(), user.getPassword());
+        if (user != null) {
+            SessionUtil.getInstance().putValue(request, "user", user);
+            if (user.isIsAdmin()) {
                 response.sendRedirect(request.getContextPath() + "/admin-home");
             } else {
                 response.sendRedirect(request.getContextPath() + "/home");
             }
         } else {
-            response.sendRedirect(request.getContextPath() + "/signin?message=Incorrect Email Or Password&alert=danger");
+            response.sendRedirect(request.getContextPath() + "/signin?message=signin_failed");
         }
     }
 }

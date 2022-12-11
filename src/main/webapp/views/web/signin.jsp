@@ -71,9 +71,9 @@
 
                         <div class="row d-flex justify-content-center">
                             <div class="col-lg-8">
-                                <c:if test="${not empty message}">
+                            <c:if test="${!empty messageResponse}">
                                 <div class="alert alert-${alert}">
-                                    ${message}
+                                    ${messageResponse}
                                 </div>
                             </c:if>
                             <h2 class="fw-bold mb-5 text-black">Đăng Nhập</h2>
@@ -81,7 +81,7 @@
 
                                 <!-- Email input -->
                                 <input type="email" id="email" name="email" placeholder="Email" required class="form-control mb-4" />
-                                
+
                                 <!-- Password input -->
                                 <input type="password" id="password" name="password" placeholder="Mật khẩu" required class="form-control mb-5" />
 

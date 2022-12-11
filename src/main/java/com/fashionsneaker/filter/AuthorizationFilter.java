@@ -22,16 +22,23 @@ public class AuthorizationFilter implements Filter {
         HttpServletRequest request = (HttpServletRequest) servletRequest;
         HttpServletResponse response = (HttpServletResponse) servletResponse;
         String url = request.getRequestURI();
+        UserModel user = (UserModel) SessionUtil.getInstance().getValue(request, "user");
+
         if (url.contains("admin")) {
-            UserModel model = (UserModel) SessionUtil.getInstance().getValue(request, "user");
-            if (model != null) {
-                if (model.isIsAdmin()) {
+            if (user != null) {
+                if (user.isIsAdmin()) {
                     filterChain.doFilter(servletRequest, servletResponse);
-                } else if (!model.isIsAdmin()) {
-                    response.sendRedirect(request.getContextPath()+"/home");
+                } else if (!user.isIsAdmin()) {
+                    response.sendRedirect(request.getContextPath() + "/home");
                 }
             } else {
-                response.sendRedirect(request.getContextPath()+"/home");
+                response.sendRedirect(request.getContextPath() + "/home");
+            }
+        } else if (url.contains("profile")) {
+            if (user == null) {
+                response.sendRedirect(request.getContextPath() + "/home");
+            } else {
+                filterChain.doFilter(servletRequest, servletResponse);
             }
         } else {
             filterChain.doFilter(servletRequest, servletResponse);

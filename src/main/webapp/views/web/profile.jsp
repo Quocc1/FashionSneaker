@@ -61,16 +61,18 @@
                         <div class="card mb-4 mb-lg-0">
                             <div class="card-body p-0">
                                 <ul class="list-group list-group-flush rounded-3">
+                                    <c:if test="${!user.isAdmin}">
+                                        <li class="list-group-item d-flex align-items-center p-3">
+                                            <a href="profile?type=receipt">
+                                                <div class="d-flex">
+                                                    <img src="views/web/img/icon/receipt-solid.svg" alt="" class="mr-2" style="width: 18px">
+                                                    <p class="mb-0 text-dark">Hóa Đơn</p>    
+                                                </div>
+                                            </a>
+                                        </li>    
+                                    </c:if>
                                     <li class="list-group-item d-flex align-items-center p-3">
-                                        <a href="receipt">
-                                            <div class="d-flex">
-                                                <img src="views/web/img/icon/receipt-solid.svg" alt="" class="mr-2" style="width: 18px">
-                                                <p class="mb-0 text-dark">Hóa Đơn</p>    
-                                            </div>
-                                        </a>
-                                    </li>
-                                    <li class="list-group-item d-flex align-items-center p-3">
-                                        <a href="password">
+                                        <a href="profile?type=password">
                                             <div class="d-flex">
                                                 <img src="views/web/img/icon/key-solid.svg" alt="" class="mr-2" style="width: 18px">
                                                 <p class="mb-0 text-dark">Đổi Mật Khẩu</p>
@@ -83,6 +85,11 @@
                         </div>
                     </div>
                     <div class="col-lg-8">
+                        <c:if test="${!empty messageResponse}">
+                                <div class="alert alert-${alert}">
+                                    ${messageResponse}
+                                </div>
+                            </c:if>
                         <div class="card mb-4">
                             <div class="card-body">
                                 <div class="row">
@@ -117,11 +124,11 @@
                                         <p class="mb-0 text-dark">Địa Chỉ</p>
                                     </div>
                                     <div class="col-sm-9">
-                                        <p class="mb-0 text-dark">abc</p>
+                                        <p class="mb-0 text-dark">${user.address != null ? user.address: "Vui Lòng Cập Nhật Địa Chỉ"}</p>
                                     </div>
                                 </div>
                                 <div class="row ml-2 mt-5">
-                                    <a class="btn btn-info " target="__blank" href="profile-edit">Chỉnh Sửa</a>
+                                    <a class="btn btn-info"  href="profile?type=edit">Chỉnh Sửa</a>
                                 </div>
                             </div>
                         </div>

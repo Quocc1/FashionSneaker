@@ -41,7 +41,7 @@ public class ProductMapper implements RowMapper<ProductModel> {
     @Override
     public ProductModel mapParam(HttpServletRequest request) {
         ProductModel product = new ProductModel();
-        Integer id = request.getParameter("id").equals("") ?  null : Integer.valueOf(request.getParameter("id"));
+        Integer id = Integer.valueOf(request.getParameter("id"));
         product.setId(id);
         Integer category_id = Integer.valueOf(request.getParameter("category_id"));
         product.setCategory_id(category_id);

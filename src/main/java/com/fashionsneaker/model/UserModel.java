@@ -5,6 +5,7 @@ public class UserModel extends AbstractModel<UserModel> {
     private String email;
     private String full_name;
     private String phone_number;
+    private String address;
     private String password;
     private boolean isAdmin;
 
@@ -30,6 +31,14 @@ public class UserModel extends AbstractModel<UserModel> {
 
     public void setPhone_number(String phone_number) {
         this.phone_number = phone_number;
+    }
+
+    public String getAddress() {
+        return address;
+    }
+
+    public void setAddress(String address) {
+        this.address = address;
     }
 
     public String getPassword() {

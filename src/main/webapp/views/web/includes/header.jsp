@@ -16,7 +16,7 @@
                         </c:when>    
                         <c:otherwise>
                             <div class="header__top__links">
-                                <a href="profile">Xin chào ${user.full_name}</a>
+                                <a href="profile?type=show">Xin chào ${user.full_name}</a>
                                 <a href="signout" class="text-danger">Đăng Xuất</a>
                             </div>
                         </c:otherwise>
@@ -47,7 +47,6 @@
                     <div class="header__nav__option">
                         <a href="#" class="search-switch"><img src="views/web/img/icon/search.png" alt="" style="width: 18px"></a>
                         <a href="cart"><img src="views/web/img/icon/cart.png" alt="" style="width: 18px"> <span>0</span></a>   
-                        <div class="price text-black">$0.00</div>
                     </div>
                 </div>
 
