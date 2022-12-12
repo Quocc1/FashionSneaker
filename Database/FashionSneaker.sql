@@ -78,9 +78,6 @@ INSERT INTO [user] VALUES ('thanhtung@gmail.com', N'Quận 4 Đống Đa, Hà N�
 INSERT INTO cart VALUES (2);
 INSERT INTO cart VALUES (4);
 
-INSERT INTO receipt VALUES (4, 2710000, '2022-12-12 12:00:00.000')
-
-
 INSERT INTO category VALUES('Nam');
 INSERT INTO category VALUES(N'Nữ');
 
