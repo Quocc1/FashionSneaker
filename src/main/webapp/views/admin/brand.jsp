@@ -73,7 +73,7 @@
                                         <div class="row">
                                             <div class="col-sm-8"><h2><b>Thông Tin Thương Hiệu</b></h2></div>
                                             <div class="col-sm-4 d-flex">
-                                                <a href="admin-brand?type=edit" class="btn btn-primary" id="btnInsert" title="Thêm" data-toggle="tooltip">Thêm Sản Phẩm</a>
+                                                <a href="admin-brand?type=edit" class="btn btn-primary" id="btnInsert" title="Thêm" data-toggle="tooltip">Thêm Thương Hiệu</a>
                                                 <div class="search-box ml-3">
                                                     <i class="material-icons">&#xE8B6;</i>
                                                     <input type="text" class="form-control" placeholder="Tìm Theo Tên&hellip;">
@@ -99,7 +99,7 @@
                                                     <td>${item.totalProduct}</td>
                                                     <td>
                                                         <a href="admin-brand?type=edit&id=${item.id}" class="btn" id="btnEdit" title="Sửa" data-toggle="tooltip"><i class="material-icons edit">&#xE254;</i></a>
-                                                        <button type="button" class="btn" id="btnDelete" value="${item.id}" title="Xóa" data-toggle="tooltip"><i class="material-icons delete">&#xE872;</i></button>
+                                                        <button type="button" onclick="deleteFunc(this.value)" class="btn" id="btnDelete" value="${item.id}" title="Xóa" data-toggle="tooltip"><i class="material-icons delete">&#xE872;</i></button>
                                                     </td>
                                                 </tr>    
                                             </c:forEach>
@@ -164,12 +164,12 @@
                     });
                 });
 
-                $("#btnDelete").click(function () {
-                    $('#id').val($(this).attr("value"));
+                function deleteFunc(value) {
+                    $('#id').val(value);
                     $('#formSubmit').attr('method', 'post');
                     $('#formSubmit').attr('action', 'api-admin-brand');
                     $('#formSubmit').submit();
-                });
+                }
         </script>
 
         <script>

@@ -8,7 +8,7 @@
         <meta name="keywords" content="Male_Fashion, unica, creative, html">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta http-equiv="X-UA-Compatible" content="ie=edge">
-        <title>Male-Fashion | Template</title>
+        <title>Fashion Sneaker</title>
 
         <!-- Google Font -->
         <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@300;400;600;700;800;900&display=swap"
@@ -23,6 +23,7 @@
         <link rel="stylesheet" href="views/web/css/owl.carousel.min.css" type="text/css">
         <link rel="stylesheet" href="views/web/css/slicknav.min.css" type="text/css">
         <link rel="stylesheet" href="views/web/css/style.css" type="text/css">
+        <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
     </head>
 
     <body>
@@ -42,234 +43,67 @@
                     <div class="container">
                         <div class="row w-50 m-auto">
                             <img src="ProductImage/${product.img_url}" alt="">
-                        </div>
                     </div>
                 </div>
-                <div class="product__details__content">
-                    <div class="container">
+            </div>
+            <div class="product__details__content">
+                <div class="container mb-5">
+                    <form action="cart" id="formSignin" method="post">
                         <div class="row d-flex justify-content-center">
                             <div class="col-lg-8">
                                 <div class="product__details__text">
                                     <h4>${product.product_name}</h4>                                  
-                                <h3>${product.price} VND</h3>                                   
-                                <div class="product__details__option">
-                                    <div class="product__details__option__size">
-                                        <span>Size:</span>
-                                        <label for="36">36
-                                            <input type="radio" id="36">
-                                        </label>
-                                        <label class="active" for="37">37
-                                            <input type="radio" id="37">
-                                        </label>
-                                        <label for="38">38
-                                            <input type="radio" id="38">
-                                        </label>
-                                        <label for="39">39
-                                            <input type="radio" id="39">
-                                        </label>
-                                        <label for="40">40
-                                            <input type="radio" id="40">
-                                        </label>
-                                        <label for="41">41
-                                            <input type="radio" id="41">
-                                        </label>
-                                        <label for="42">42
-                                            <input type="radio" id="42">
-                                        </label>
-                                        <label for="43">43
-                                            <input type="radio" id="43">
-                                        </label>
-                                    </div>                                      
-                                </div>
-                                <div class="product__details__cart__option">
-                                    <div class="quantity">
-                                        <div class="pro-qty">
-                                            <input type="text" value="1">
-                                        </div>
+                                    <h3>${product.price} VND</h3>                                   
+                                    <div class="product__details__option">
+                                        <div class="product__details__option__size">
+                                            <h4>Size: <b>${product.size}</b></h4>
+                                        </div>                                      
                                     </div>
-                                    <a href="#" class="primary-btn">Thêm Vào Giỏ Hàng</a>
-                                </div>                                   
-                                <div class="product__details__last__option">                                       
-                                    <img src="views/web/img/shop-details/details-payment.png" alt="">                                      
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="col-lg-12">
-                            <div class="product__details__tab">
-                                <ul class="nav nav-tabs" role="tablist">
-                                    <li class="nav-item">
-                                        <a class="nav-link active text-dark">Mô Tả Sản Phẩm</a>
-                                    </li>                                      
-                                </ul>
-                                <div class="tab-content">
-                                    <div class="tab-pane active" id="tabs-5" role="tabpanel">
-                                        <div class="product__details__tab__content">                                          
-                                            <div class="product__details__tab__content__item ">
-                                                <h5>Thông Tin Sản Phẩm</h5>
-                                                <p class="text-dark">${product.description}
-                                                </p>                                                  
-                                            </div>                                             
+                                    <div class="product__details__cart__option d-flex flex-column">
+                                        <div class="quantity d-flex m-auto pb-5">
+                                            <button onclick="increaseQuantity()" type="button" class="fa fa-angle-up dec qtybtn btn btn-light"></button>
+                                            <h3 type="text" id="product-quantity" class="mx-2 my-0">1</h3>
+                                            <button onclick="decreaseQuantity()" type="button" class="fa fa-angle-down inc qtybtn btn btn-light"></button>
                                         </div>
-                                    </div>                                 
+                                        <button type="submit" class="primary-btn text-light">Thêm Vào Giỏ Hàng</button>
+                                        <input type="hidden" value="${product.id}" id="product_id" name="product_id"/>
+                                        <input type="hidden" value="${cart.id}" id="cart_id" name="cart_id"/>
+                                        <input type="hidden" value="" id="item_quantity" name="item_quantity"/>
+
+                                    </div>                                   
+                                    <div class="product__details__last__option">                                       
+                                        <img src="views/web/img/shop-details/details-payment.png" alt="">                                      
+                                    </div>
                                 </div>
                             </div>
                         </div>
-                    </div>                    
+                        <div class="row">
+                            <div class="col-lg-12">
+                                <div class="product__details__tab">
+                                    <ul class="nav nav-tabs" role="tablist">
+                                        <li class="nav-item">
+                                            <a class="nav-link active text-dark">Mô Tả Sản Phẩm</a>
+                                        </li>                                      
+                                    </ul>
+                                    <div class="tab-content">
+                                        <div class="tab-pane active" id="tabs-5" role="tabpanel">
+                                            <div class="product__details__tab__content">                                          
+                                                <div class="product__details__tab__content__item ">
+                                                    <h5>Thông Tin Sản Phẩm</h5>
+                                                    <p class="text-dark">${product.description}
+                                                    </p>                                                  
+                                                </div>                                             
+                                            </div>
+                                        </div>                                 
+                                    </div>
+                                </div>
+                            </div>
+                        </div>       
+                    </form>
                 </div>
             </div>
         </section>
         <!-- Shop Details Section End -->
-
-        <!-- Related Section Begin -->
-        <section class="product spad mt-5">
-            <div class="container">
-                <div class="row">
-                    <div class="col-lg-12">
-                        <ul class="filter__controls">
-                            <li class="active" data-filter="*">Best Sellers</li>
-                            <li data-filter=".new-arrivals">New Arrivals</li>
-                            <li data-filter=".hot-sales">Hot Sales</li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="row product__filter">
-                    <div
-                        class="col-lg-3 col-md-6 col-sm-6 col-md-6 col-sm-6 mix new-arrivals"
-                        >
-                        <div class="product__item">
-                            <div
-                                class="product__item__pic set-bg"
-                                data-setbg="views/web/img/product/nb.jpg"
-                                >
-                                <span class="label">New</span>
-                            </div>
-                            <div class="product__item__text">
-                                <h6>New Balance 550 White Green</h6>
-                                <a href="#" class="add-cart">+ Thêm Vào Giỏ Hàng</a>
-                                <h5>1.500.000 VND</h5>
-                            </div>
-                        </div>
-                    </div>
-                    <div
-                        class="col-lg-3 col-md-6 col-sm-6 col-md-6 col-sm-6 mix hot-sales"
-                        >
-                        <div class="product__item">
-                            <div
-                                class="product__item__pic set-bg"
-                                data-setbg="views/web/img/product/mlb4.jpg"
-                                >
-                            </div>
-                            <div class="product__item__text">
-                                <h6>MLB Chunky New York White</h6>
-                                <a href="#" class="add-cart">+ Thêm Vào Giỏ Hàng</a>
-                                <h5>3.800.000 VND</h5>              
-                            </div>
-                        </div>
-                    </div>
-                    <div
-                        class="col-lg-3 col-md-6 col-sm-6 col-md-6 col-sm-6 mix new-arrivals"
-                        >
-                        <div class="product__item sale">
-                            <div
-                                class="product__item__pic set-bg"
-                                data-setbg="views/web/img/product/conver.jpg"
-                                >
-                                <span class="label">Sale</span>
-                            </div>
-                            <div class="product__item__text">
-                                <h6>Converse Chuck Taylor All Star 1970s</h6>
-                                <a href="#" class="add-cart">+ Thêm Vào Giỏ Hàng</a>
-                                <h5>2.000.000 VND</h5>
-                            </div>
-                        </div>
-                    </div>
-                    <div
-                        class="col-lg-3 col-md-6 col-sm-6 col-md-6 col-sm-6 mix hot-sales"
-                        >
-                        <div class="product__item">
-                            <div
-                                class="product__item__pic set-bg"
-                                data-setbg="views/web/img/product/jordan4.jpg"
-                                >
-                            </div>
-                            <div class="product__item__text">
-                                <h6>Nike Air Jordan 4 Pure Money</h6>
-                                <a href="#" class="add-cart">+ Thêm Vào Giỏ Hàng</a>
-                                <h5>10.000.000 VND</h5>
-                            </div>
-                        </div>
-                    </div>
-                    <div
-                        class="col-lg-3 col-md-6 col-sm-6 col-md-6 col-sm-6 mix new-arrivals"
-                        >
-                        <div class="product__item">
-                            <div
-                                class="product__item__pic set-bg"
-                                data-setbg="views/web/img/product/jd1.jpg"
-                                >
-                            </div>
-                            <div class="product__item__text">
-                                <h6>Nike Air Jordan 1 Mid ‘College Grey’</h6>
-                                <a href="#" class="add-cart">+ Thêm Vào Giỏ Hàng</a>
-                                <h5>4.000.000 VND</h5>
-                            </div>
-                        </div>
-                    </div>
-                    <div
-                        class="col-lg-3 col-md-6 col-sm-6 col-md-6 col-sm-6 mix hot-sales"
-                        >
-                        <div class="product__item sale">
-                            <div
-                                class="product__item__pic set-bg"
-                                data-setbg="views/web/img/product/converdo.jpg"
-                                >
-                                <span class="label">Sale</span>
-                            </div>
-                            <div class="product__item__text">
-                                <h6>Converse All-Court VLTG</h6>
-                                <a href="#" class="add-cart">+ Thêm Vào Giỏ Hàng</a>
-                                <h5>1.190.000 VND</h5>
-                            </div>
-                        </div>
-                    </div>
-                    <div
-                        class="col-lg-3 col-md-6 col-sm-6 col-md-6 col-sm-6 mix new-arrivals"
-                        >
-                        <div class="product__item">
-                            <div
-                                class="product__item__pic set-bg"
-                                data-setbg="views/web/img/product/nike2.jpg"
-                                >
-                            </div>
-                            <div class="product__item__text">
-                                <h6>Nike Air Force 1</h6>
-                                <a href="#" class="add-cart">+ Thêm Vào Giỏ Hàng</a>
-                                <h5>2.500.000 VND</h5>
-                            </div>
-                        </div>
-                    </div>
-                    <div
-                        class="col-lg-3 col-md-6 col-sm-6 col-md-6 col-sm-6 mix hot-sales"
-                        >
-                        <div class="product__item">
-                            <div
-                                class="product__item__pic set-bg"
-                                data-setbg="views/web/img/product/ultratrang.jpg"
-                                >
-                            </div>
-                            <div class="product__item__text">
-                                <h6>Adidas Ultra Boost Triple White</h6>
-                                <a href="#" class="add-cart">+ Thêm Vào Giỏ Hàng</a>
-                                <h5>3.000.000 VND</h5>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-        <!-- Product Section End -->
 
         <!-- Footer Section Begin -->
         <jsp:include page="./includes/footer.jsp"></jsp:include>
@@ -285,6 +119,26 @@
             </div>
         </div>
         <!-- Search End -->
+
+        <script>
+            $(document).ready(function () {
+                $('#item_quantity').val(1);
+            });
+
+            function increaseQuantity() {
+                var product_quantity = parseInt($('#product-quantity').text());
+                $('#product-quantity').text(product_quantity + 1);
+                $('#item_quantity').val(product_quantity + 1);
+            }
+
+            function decreaseQuantity() {
+                var product_quantity = parseInt($('#product-quantity').text());
+                if (product_quantity > 0) {
+                    $('#product-quantity').text(product_quantity - 1);
+                    $('#item_quantity').val(product_quantity + 1);
+                }
+            }
+        </script>        
 
         <!-- Js Plugins -->
         <script src="views/web/js/jquery-3.3.1.min.js"></script>

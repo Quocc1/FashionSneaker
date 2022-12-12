@@ -31,7 +31,7 @@ public class BrandAPI extends HttpServlet {
             } else if (method.equals("DELETE")) {
                 Integer id = Integer.valueOf(request.getParameter("id"));
                 BrandModel brand = brandService.findById(id);
-                brand.setTotalProduct(id);
+                brand.setTotalProduct(brandService.getTotalProduct(id));
                 if (brand.getTotalProduct() == 0) {
                     try {
                         brandService.delete(id);

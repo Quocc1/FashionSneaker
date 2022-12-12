@@ -1,6 +1,8 @@
 package com.fashionsneaker.controller.web;
 
+import com.fashionsneaker.model.CartModel;
 import com.fashionsneaker.model.UserModel;
+import com.fashionsneaker.service.ICartService;
 import com.fashionsneaker.service.IUserService;
 import com.fashionsneaker.utils.FormUtil;
 import com.fashionsneaker.utils.MessageUtil;
@@ -20,11 +22,14 @@ public class SigninController extends HttpServlet {
     @Inject
     private IUserService userService;
 
+    @Inject
+    private ICartService cartService;
+
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        UserModel model = (UserModel) SessionUtil.getInstance().getValue(request, "user");
-        if (model != null) {
-            if (model.isIsAdmin()) {
+        UserModel user = (UserModel) SessionUtil.getInstance().getValue(request, "user");
+        if (user != null) {
+            if (user.isIsAdmin()) {
                 response.sendRedirect(request.getContextPath() + "/admin-home");
             } else {
                 response.sendRedirect(request.getContextPath() + "/home");
@@ -45,6 +50,8 @@ public class SigninController extends HttpServlet {
             if (user.isIsAdmin()) {
                 response.sendRedirect(request.getContextPath() + "/admin-home");
             } else {
+                CartModel cart = cartService.findById(user.getId());
+                SessionUtil.getInstance().putValue(request, "cart", cart);
                 response.sendRedirect(request.getContextPath() + "/home");
             }
         } else {

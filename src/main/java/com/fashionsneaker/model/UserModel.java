@@ -8,6 +8,8 @@ public class UserModel extends AbstractModel<UserModel> {
     private String address;
     private String password;
     private boolean isAdmin;
+    private Integer totalreceipt;
+    private Integer moneySpent;
 
     public String getEmail() {
         return email;
@@ -55,6 +57,22 @@ public class UserModel extends AbstractModel<UserModel> {
 
     public void setIsAdmin(boolean isAdmin) {
         this.isAdmin = isAdmin;
+    }
+
+    public Integer getTotalreceipt() {
+        return totalreceipt;
+    }
+
+    public void setTotalreceipt(Integer totalreceipt) {
+        this.totalreceipt = totalreceipt;
+    }
+
+    public Integer getMoneySpent() {
+        return moneySpent;
+    }
+
+    public void setMoneySpent(Integer moneySpent) {
+        this.moneySpent = moneySpent;
     }
 
 }

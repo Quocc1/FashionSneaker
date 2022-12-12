@@ -36,6 +36,9 @@ public class MessageUtil {
             } else if (message.equals("update_password_failed")) {
                 messageResponse = "Mật Khẩu Cũ Không Chính Xác, Vui Lòng Nhập Lại";
                 alert = "danger";
+            } else if (message.equals("signin_required")) {
+                messageResponse = "Vui Lòng Đang Nhập Để Có Thể Sử Dụng Đầy Đủ Các Chức Năng Trong Cửa Hàng";
+                alert = "danger";
             }
             request.setAttribute("messageResponse", messageResponse);
             request.setAttribute("alert", alert);

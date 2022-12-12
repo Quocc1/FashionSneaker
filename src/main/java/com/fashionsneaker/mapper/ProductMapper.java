@@ -41,7 +41,7 @@ public class ProductMapper implements RowMapper<ProductModel> {
     @Override
     public ProductModel mapParam(HttpServletRequest request) {
         ProductModel product = new ProductModel();
-        Integer id = Integer.valueOf(request.getParameter("id"));
+        Integer id = request.getParameter("id") == null ? null : Integer.valueOf(request.getParameter("id"));
         product.setId(id);
         Integer category_id = Integer.valueOf(request.getParameter("category_id"));
         product.setCategory_id(category_id);
@@ -59,7 +59,7 @@ public class ProductMapper implements RowMapper<ProductModel> {
         product.setQuantity(quantity);
         String img_url = request.getParameter("img_url");
         try {
-            if (img_url == null && !request.getParts().isEmpty()) {
+            if (img_url.equals("") && !request.getParts().isEmpty()) {
                 Part filePart = request.getPart("img");
                 String fileName = filePart.getSubmittedFileName();
                 String path = request.getServletContext().getRealPath("");

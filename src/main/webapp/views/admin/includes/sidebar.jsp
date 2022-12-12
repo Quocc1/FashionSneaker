@@ -32,7 +32,7 @@
     </li>
 
     <li class="nav-item">
-        <a class="nav-link" href="admin-customer">
+        <a class="nav-link" href="admin-customer?type=list&page=1&maxPageItem=10&sortName=id&sortBy=asc">
             <i class="fas fa-fw fa-table"></i>
             <span>Khách hàng</span></a>
     </li>

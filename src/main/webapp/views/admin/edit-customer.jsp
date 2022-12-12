@@ -69,7 +69,7 @@
                                     <div class="form-group">
                                         <label class="control-label no-padding-right">Thể Loại</label>
                                         <div class="">
-                                            <select class="form-control" id="category_id" name="category_id">
+                                            <select required class="form-control" id="category_id" name="category_id">
                                                 <c:if test="${empty product.id}">
                                                     <option value="">Chọn Thể Loại Giày</option>
                                                     <c:forEach var="category" items="${categories}">
@@ -89,7 +89,7 @@
                                     <div class="form-group">
                                         <label class="control-label no-padding-right">Thương Hiệu</label>
                                         <div class="">
-                                            <select class="form-control" id="brand_id" name="brand_id">
+                                            <select required class="form-control" id="brand_id" name="brand_id">
                                                 <c:if test="${empty product.id}">
                                                     <option value="">Chọn Thương Hiệu Giày</option>
                                                     <c:forEach var="brand" items="${brands}">
@@ -109,37 +109,37 @@
                                     <div class="form-group">
                                         <label class="control-label no-padding-right">Tên Sản Phẩm</label>
                                         <div class="">
-                                            <input type="text" class="form-control" id="product_name" name="product_name" value="${product.product_name}"/>
+                                            <input type="text" required class="form-control" id="product_name" name="product_name" value="${product.product_name}"/>
                                         </div>
                                     </div>
                                     <div class="form-group">
                                         <label class="control-label no-padding-right">Giá Sản Phẩm</label>
                                         <div class="">
-                                            <input type="text" class="form-control" id="price" name="price" value="${product.price}"/>
+                                            <input type="text" required class="form-control" id="price" name="price" value="${product.price}"/>
                                         </div>
                                     </div>
                                     <div class="form-group">
                                         <label class="control-label no-padding-right">Số Lượng Sản Phẩm</label>
                                         <div class="">
-                                            <input type="text" class="form-control" id="quantity" name="quantity" value="${product.quantity}"/>
+                                            <input type="text" required class="form-control" id="quantity" name="quantity" value="${product.quantity}"/>
                                         </div>
                                     </div>
                                     <div class="form-group">
                                         <label class="control-label no-padding-right">Kích Cỡ Sản Phẩm</label>
                                         <div class="">
-                                            <input type="text" class="form-control" id="size" name="size" value="${product.size}"/>
+                                            <input type="text" required class="form-control" id="size" name="size" value="${product.size}"/>
                                         </div>
                                     </div>
                                     <div class="form-group">
                                         <label class="control-label no-padding-right">Hình Đại Diện</label>
                                         <div class="">
-                                            <input type="file" class="form-control" id="img" name="img" value="${product.img_url}"/>
+                                            <input type="file" required class="form-control" id="img" name="img" value="${product.img_url}"/>
                                         </div>
                                     </div>
                                     <div class="form-group">
                                         <label class="control-label no-padding-right">Mô Tả</label>
                                         <div>                                 
-                                            <textarea rows="" cols="" id="description" name="description">${product.description}</textarea>
+                                            <textarea required rows="" cols="" id="description" name="description">${product.description}</textarea>
                                         </div>
                                     </div>
                                     <div class="form-group">
@@ -154,8 +154,8 @@
                                     </div>
                                     <c:if test="${!empty product.id}">
                                         <input type="hidden" name="method" value="PUT">
+                                        <input type="hidden" value="${product.id}" id="id" name="id"/>
                                     </c:if>
-                                    <input type="hidden" value="${product.id}" id="id" name="id"/>
                                     <input type="hidden" value="${product.img_url}" id="img_url" name="img_url"/>
                                 </form>
                             </div>

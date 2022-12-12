@@ -71,9 +71,8 @@
                                             </div>
                                         </c:if>
                                         <div class="row">
-                                            <div class="col-sm-8"><h2><b>Thông Tin Sản Phẩm</b></h2></div>
+                                            <div class="col-sm-8"><h2><b>Thông Tin Khách Hàng</b></h2></div>
                                             <div class="col-sm-4 d-flex">
-                                                <a href="admin-product?type=edit" class="btn btn-primary" id="btnInsert" title="Thêm" data-toggle="tooltip">Thêm Sản Phẩm</a>
                                                 <div class="search-box ml-3">
                                                     <i class="material-icons">&#xE8B6;</i>
                                                     <input type="text" class="form-control" placeholder="Tìm Theo Tên&hellip;">
@@ -86,29 +85,23 @@
                                             <tr>
                                                 <!--<i class="fa fa-sort"></i>-->
                                                 <th>Id</th>
-                                                <th class="col-1">Category</th>
-                                                <th class="col-1">Brand</th>
                                                 <th>Name</th>
-                                                <th>Description</th>
-                                                <th>Price</th>                                           
-                                                <th>Size</th>
-                                                <th class="col-1">Quantity</th>
-                                                <th>Image</th>
+                                                <th>Email</th>
+                                                <th>Address</th>
+                                                <th>Number Of Receipt</th>
+                                                <th>Money Spent</th>
                                                 <th>Actions</th>
                                             </tr>
                                         </thead>
                                         <tbody>
-                                            <c:forEach var="item" items="${product.listResult}">
+                                            <c:forEach var="item" items="${user.listResult}">
                                                 <tr>
                                                     <td>${item.id}</td>
-                                                    <td>${item.category_name}</td>
-                                                    <td>${item.brand_name}</td>
-                                                    <td>${item.product_name}</td>
-                                                    <td>${item.description}</td>
-                                                    <td>${item.price}</td>
-                                                    <td>${item.size}</td>
-                                                    <td>${item.quantity}</td>
-                                                    <td><image src="ProductImage/${item.img_url}" alt="${item.img_url}" style="max-width: 100px;"></td>
+                                                    <td>${item.full_name}</td>
+                                                    <td>${item.email}</td>
+                                                    <td>${item.address}</td>
+                                                    <td>${item.totalReceipt}</td>
+                                                    <td>${item.moneySpent}</td>
                                                     <td>
                                                         <a href="admin-product?type=edit&id=${item.id}" class="btn" id="btnEdit" title="Sửa" data-toggle="tooltip"><i class="material-icons edit">&#xE254;</i></a>
                                                         <button type="button" class="btn" id="btnDelete" value="${item.id}" title="Xóa" data-toggle="tooltip"><i class="material-icons delete">&#xE872;</i></button>
@@ -120,7 +113,7 @@
                                         </tbody>
                                     </table>
                                     <div class="clearfix d-flex">
-                                        <div class="hint-text">Hiển thị <b>${product.maxPageItem}</b> trên tổng <b>${product.totalItem}</b> sản phẩm</div>
+                                        <div class="hint-text">Hiển thị <b>${user.maxPageItem}</b> trên tổng <b>${user.totalItem}</b> sản phẩm</div>
                                         <ul class="pagination ml-auto" id="pagination"></ul>
                                         <input type="hidden" value="" id="page" name="page"/>
                                         <input type="hidden" value="" id="maxPageItem" name="maxPageItem"/>
@@ -155,8 +148,8 @@
             </a>
 
             <script>
-                var totalPages = ${product.totalPage};
-                var currentPage = ${product.page};
+                var totalPages = ${user.totalPage};
+                var currentPage = ${user.page};
                 var limit = 5;
                 $(function () {
                     window.pagObj = $('#pagination').twbsPagination({
@@ -167,7 +160,7 @@
                             if (currentPage != page) {
                                 $('#maxPageItem').val(limit);
                                 $('#page').val(page);
-                                $('#sortName').val('product.id');
+                                $('#sortName').val('id');
                                 $('#sortBy').val('asc');
                                 $('#type').val('list');
                                 $('#formSubmit').submit();
@@ -179,7 +172,7 @@
                 $("#btnDelete").click(function () {
                     $('#id').val($(this).attr("value"));
                     $('#formSubmit').attr('method', 'post');
-                    $('#formSubmit').attr('action', 'api-admin-product');
+                    $('#formSubmit').attr('action', 'api-admin-user');
                     $('#formSubmit').submit();
                 });
         </script>

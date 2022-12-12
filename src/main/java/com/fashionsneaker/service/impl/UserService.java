@@ -2,6 +2,8 @@ package com.fashionsneaker.service.impl;
 
 import com.fashionsneaker.dao.IUserDAO;
 import com.fashionsneaker.model.UserModel;
+import com.fashionsneaker.paging.Pageble;
+import java.util.List;
 import com.fashionsneaker.service.IUserService;
 import javax.inject.Inject;
 
@@ -9,6 +11,16 @@ public class UserService implements IUserService {
 
     @Inject
     private IUserDAO userDAO;
+
+    @Override
+    public List<UserModel> findAll(Pageble pageble) {
+        return userDAO.findAll(pageble);
+    }
+
+    @Override
+    public UserModel findById(int id) {
+        return userDAO.findById(id);
+    }
 
     @Override
     public UserModel findByEmailAndPassword(String email, String password) {
@@ -34,6 +46,21 @@ public class UserService implements IUserService {
     @Override
     public void delete(int id) {
         userDAO.delete(id);
+    }
+
+    @Override
+    public int getTotalItem() {
+        return userDAO.getTotalItem();
+    }
+
+    @Override
+    public int getTotalReceipt(int id) {
+        return userDAO.getTotalReceipt(id);
+    }
+
+    @Override
+    public int getTotalMoneySpent(int id) {
+        return userDAO.getTotalMoneySpent(id);
     }
 
     @Override

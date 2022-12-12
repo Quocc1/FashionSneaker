@@ -18,6 +18,7 @@ public class SignoutController extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         SessionUtil.getInstance().removeValue(request, "user");
+        SessionUtil.getInstance().removeValue(request, "cart");
         response.sendRedirect(request.getContextPath() + "/home");
     }
 

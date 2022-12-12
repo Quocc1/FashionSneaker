@@ -1,6 +1,7 @@
 package com.fashionsneaker.controller.web;
 
 import com.fashionsneaker.model.UserModel;
+import com.fashionsneaker.service.ICartService;
 import com.fashionsneaker.service.IUserService;
 import com.fashionsneaker.utils.FormUtil;
 import com.fashionsneaker.utils.MessageUtil;
@@ -19,6 +20,9 @@ public class SignupController extends HttpServlet {
     @Inject
     private IUserService userService;
 
+    @Inject
+    private ICartService cartService;
+
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         String alert = request.getParameter("alert");
@@ -35,9 +39,10 @@ public class SignupController extends HttpServlet {
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         request.setCharacterEncoding("UTF-8");
-        UserModel model = FormUtil.toModel(UserModel.class, request);
-        UserModel userModel = userService.save(model);
-        if (userModel != null) {
+        UserModel user = FormUtil.toModel(UserModel.class, request);
+        user = userService.save(user);
+        if (user != null) {
+            cartService.save(user.getId());
             response.sendRedirect(request.getContextPath() + "/signin?message=signup_success");
         } else {
             response.sendRedirect(request.getContextPath() + "/signup?message=signup_failed");

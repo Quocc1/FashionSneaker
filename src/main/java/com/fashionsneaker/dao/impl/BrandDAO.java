@@ -36,9 +36,8 @@ public class BrandDAO extends AbstractDAO<BrandModel> implements IBrandDAO {
 
     @Override
     public int save(BrandModel brandModel) {
-        String sql = "INSERT INTO brand VALUES(?, ?)";
-        return insert(sql, brandModel.getId(),
-                brandModel.getBrand_name());
+        String sql = "INSERT INTO brand VALUES(?)";
+        return insert(sql, brandModel.getBrand_name());
     }
 
     @Override

@@ -85,56 +85,32 @@
                         </div>
                     </div>
                     <div class="col-lg-8">
-                        <c:if test="${!empty messageResponse}">
-                                <div class="alert alert-${alert}">
-                                    ${messageResponse}
-                                </div>
-                            </c:if>
                         <div class="card mb-4">
                             <div class="card-body">
-                                <div class="row">
-                                    <div class="col-sm-3">
-                                        <p class="mb-0 text-dark">Họ Và Tên</p>
+                                <div class="receipt-item">
+                                    <div class="d-flex align-items-center">
+                                        <div class="product__cart__item__pic d-flex align-items-center  mr-auto">
+                                            <div class="product__cart__item__pic">
+                                                <img style="max-width: 130px;" src="views/web/img/product/nb.jpg" alt="">
+                                            </div>
+                                            <div class="product__cart__item__text">
+                                                <h5><b>New Balance 550 White Green</b></h5>
+                                                <p class="m-0">x1</p>
+                                            </div>
+                                        </div>
+                                        <div class="cart__price">
+                                            <h5 tex><b>1.500.000 VND</b></h5>
+                                        </div>
                                     </div>
-                                    <div class="col-sm-9">
-                                        <p class="mb-0 text-dark">${user.full_name}</p>
-                                    </div>
-                                </div>
-                                <hr>
-                                <div class="row">
-                                    <div class="col-sm-3">
-                                        <p class="mb-0 text-dark">Email</p>
-                                    </div>
-                                    <div class="col-sm-9">
-                                        <p class="mb-0 text-dark">${user.email}</p>
-                                    </div>
-                                </div>
-                                <hr>
-                                <div class="row">
-                                    <div class="col-sm-3">
-                                        <p class="mb-0 text-dark">Số Điện Thoại</p>
-                                    </div>
-                                    <div class="col-sm-9">
-                                        <p class="mb-0 text-dark">${user.phone_number != null ? user.phone_number: "Vui Lòng Cập Nhật Số Điện Thoại"}</p>
+                                    <div>
+                                        <p>Ngày Mua: 12/12/2022</p>
                                     </div>
                                 </div>
-                                <hr>
-                                <div class="row">
-                                    <div class="col-sm-3">
-                                        <p class="mb-0 text-dark">Địa Chỉ</p>
-                                    </div>
-                                    <div class="col-sm-9">
-                                        <p class="mb-0 text-dark">${user.address != null ? user.address: "Vui Lòng Cập Nhật Địa Chỉ"}</p>
-                                    </div>
-                                </div>
-                                <div class="row ml-2 mt-5">
-                                    <a class="btn btn-info"  href="profile?type=edit">Chỉnh Sửa</a>
-                                </div>
+
                             </div>
                         </div>
                     </div>
                 </div>
-            </div>
         </section>
         <!-- End of Body -->
 

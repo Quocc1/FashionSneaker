@@ -19,7 +19,6 @@
         <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"></script>
         <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.2/css/bootstrap.min.css">
-        <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
         <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.2/js/bootstrap.min.js"></script>
         <script src="views/admin/js/jquery.twbsPagination.js" type="text/javascript"></script>
 
@@ -111,7 +110,7 @@
                                                     <td><image src="ProductImage/${item.img_url}" alt="${item.img_url}" style="max-width: 100px;"></td>
                                                     <td>
                                                         <a href="admin-product?type=edit&id=${item.id}" class="btn" id="btnEdit" title="Sửa" data-toggle="tooltip"><i class="material-icons edit">&#xE254;</i></a>
-                                                        <button type="button" class="btn" id="btnDelete" value="${item.id}" title="Xóa" data-toggle="tooltip"><i class="material-icons delete">&#xE872;</i></button>
+                                                        <button type="button" onclick="deleteFunc(this.value)" class="btn" id="btnDelete" value="${item.id}" title="Xóa" data-toggle="tooltip"><i class="material-icons delete">&#xE872;</i></button>
                                                     </td>
                                                 </tr>    
                                             </c:forEach>
@@ -176,12 +175,12 @@
                     });
                 });
 
-                $("#btnDelete").click(function () {
-                    $('#id').val($(this).attr("value"));
+                function deleteFunc(value) {
+                    $('#id').val(value);
                     $('#formSubmit').attr('method', 'post');
                     $('#formSubmit').attr('action', 'api-admin-product');
                     $('#formSubmit').submit();
-                });
+                }
         </script>
 
         <script>

@@ -22,7 +22,7 @@ public class BrandMapper implements RowMapper<BrandModel> {
     @Override
     public BrandModel mapParam(HttpServletRequest request) {
         BrandModel brand = new BrandModel();
-        Integer id = Integer.valueOf(request.getParameter("id"));
+        Integer id = request.getParameter("id") == null ? null : Integer.valueOf(request.getParameter("id"));
         brand.setId(id);
         String brand_name = request.getParameter("brand_name");
         brand.setBrand_name(brand_name);
