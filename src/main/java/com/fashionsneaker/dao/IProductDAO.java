@@ -7,10 +7,16 @@ import java.util.List;
 public interface IProductDAO extends GenericDAO<ProductModel> {
 
     List<ProductModel> findAll(Pageble pageable);
+
     ProductModel findById(int id);
+
     List<ProductModel> findByCategoryId(int categoryId);
+
     int save(ProductModel productModel);
+
     void update(ProductModel productModel);
+
     void delete(int id);
+
     int getTotalItem();
 }

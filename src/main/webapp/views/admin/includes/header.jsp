@@ -41,7 +41,7 @@
         <li class="nav-item dropdown no-arrow">
             <!-- User Information -->
             <div class="header__top__links">
-                <a href="profile" class=" text-dark mr-3">Xin chào ${user.full_name}</a>
+                <a href="profile?type=show" class=" text-dark mr-3">Xin chào ${user.full_name}</a>
                 <a href="signout" class="text-danger">Đăng Xuất</a>
             </div>
         </li>

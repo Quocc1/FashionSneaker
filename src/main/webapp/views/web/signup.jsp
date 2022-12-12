@@ -71,9 +71,9 @@
                     <div class="card-body py-5 px-md-5">
                         <div class="row d-flex justify-content-center">
                             <div class="col-lg-8">
-                                <c:if test="${not empty message}">
+                            <c:if test="${!empty messageResponse}">
                                 <div class="alert alert-${alert}">
-                                    ${message}
+                                    ${messageResponse}
                                 </div>
                             </c:if>
                             <h2 class="fw-bold mb-5 text-black">Đăng Kí</h2>

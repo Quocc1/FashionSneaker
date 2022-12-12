@@ -3,6 +3,7 @@ package com.fashionsneaker.controller.web;
 import com.fashionsneaker.model.UserModel;
 import com.fashionsneaker.service.IUserService;
 import com.fashionsneaker.utils.FormUtil;
+import com.fashionsneaker.utils.MessageUtil;
 import java.io.IOException;
 import javax.inject.Inject;
 import javax.servlet.RequestDispatcher;
@@ -26,6 +27,7 @@ public class SignupController extends HttpServlet {
             request.setAttribute("message", message);
             request.setAttribute("alert", alert);
         }
+        MessageUtil.showMessage(request);
         RequestDispatcher rd = request.getRequestDispatcher("/views/web/signup.jsp");
         rd.forward(request, response);
     }
@@ -36,9 +38,9 @@ public class SignupController extends HttpServlet {
         UserModel model = FormUtil.toModel(UserModel.class, request);
         UserModel userModel = userService.save(model);
         if (userModel != null) {
-            response.sendRedirect(request.getContextPath() + "/signin?message=Account Created Successfully, Please Login&alert=success");
+            response.sendRedirect(request.getContextPath() + "/signin?message=signup_success");
         } else {
-            response.sendRedirect(request.getContextPath() + "/signup?message=Email Already Exists, Please Choose Another Email&alert=danger");
+            response.sendRedirect(request.getContextPath() + "/signup?message=signup_failed");
         }
     }
 }

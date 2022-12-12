@@ -7,6 +7,7 @@ GO
 CREATE TABLE [user] (
 	id INT IDENTITY(1,1) PRIMARY KEY,
 	email VARCHAR(50) NOT NULL,
+    address NVARCHAR(100) NULL,
 	full_name NVARCHAR(50) NOT NULL,
 	phone_number VARCHAR(50) NULL,
 	password VARCHAR(50) NOT NULL,
@@ -41,16 +42,24 @@ GO
 
 CREATE TABLE cart (
 	id INT IDENTITY(1,1) PRIMARY KEY,
-	account_id INT NOT NULL,
-	product_id INT FOREIGN KEY REFERENCES product(id),
-	product_quantity INT NULL,
+	[user_id] INT FOREIGN KEY REFERENCES [user](id),
+	createddate TIMESTAMP NOT NULL,
 )
 GO
 
-INSERT INTO [user] VALUES ('ny64394@gmail.com', N'Nguyễn Ý', '0886315580', '123', 1)
-INSERT INTO [user] VALUES ('caobinhoh@gmail.com', N'Nguyễn Trị Quốc', '0327325177', '1234', 0)
-INSERT INTO [user] VALUES ('dinhquangthang3112002@gmail.com', N'Đinh Quang Thắng', '0334687767', '12345', 1)
-INSERT INTO [user] VALUES ('thanhtung@gmail.com', N'Nguyễn Thanh Tùng', '08864267342', '123456', 0)
+CREATE TABLE cart_item (
+	id INT IDENTITY(1,1) PRIMARY KEY,
+	product_id INT FOREIGN KEY REFERENCES product(id),
+	cart_id INT FOREIGN KEY REFERENCES cart(id),
+	item_quantity INT NOT NULL,
+)
+GO
+
+
+INSERT INTO [user] VALUES ('ny64394@gmail.com', N'Quận 1 Đống Đa, Hà Nội', N'Nguyễn Ý', '0886315580', '123', 1)
+INSERT INTO [user] VALUES ('caobinhoh@gmail.com', N'Quận 2 Đống Đa, Hà Nội', N'Nguyễn Trị Quốc', '0327325177', '1234', 0)
+INSERT INTO [user] VALUES ('dinhquangthang3112002@gmail.com', N'Quận 3 Đống Đa, Hà Nội', N'Đinh Quang Thắng', '0334687767', '12345', 1)
+INSERT INTO [user] VALUES ('thanhtung@gmail.com', N'Quận 4 Đống Đa, Hà Nội', N'Nguyễn Thanh Tùng', '08864267342', '123456', 0)
 
 INSERT INTO category VALUES('Nam');
 INSERT INTO category VALUES(N'Nữ');
@@ -69,7 +78,7 @@ Nh&igrave;n qua th&igrave; nhiều người hay nhầm với đ&ocirc;i Classic 
 -Phần đế m&agrave;u trắng ng&agrave; vintage được phủ 1 lớp b&oacute;ng b&ecirc;n ngo&agrave;i l&agrave; điểm nhấn ri&ecirc;ng cho d&ograve;ng 1970s, dễ vệ sinh hơn.<br />
 -Vải d&agrave;y dặn, cứng form hơn.<br />
 -D&acirc;y gi&agrave;y d&agrave;y hơn, c&ugrave;ng m&agrave;u với phần đế.<br />
--Tem g&oacute;t đen 1st-tring - đặc trưng ri&ecirc;ng của d&ograve;ng 1970s.</p>', 1710000, 40, 10, 'nb.jpg');
+-Tem g&oacute;t đen 1st-tring - đặc trưng ri&ecirc;ng của d&ograve;ng 1970s.</p>', 1710000, 40, 10, 'conver.jpg');
 INSERT INTO product VALUES(1, 5, 'New Balance 550 White Green', N'<p>New Balance l&agrave; một thương hiệu thời trang v&agrave; gi&agrave;y thể thao từ Mỹ. Hơn 100 năm qua, New Balance lu&ocirc;n t&igrave;m hiểu nhu cầu của những vận động vi&ecirc;n để đầu tư, thiết kế những sản phẩm ph&ugrave; hợp. New Balance lu&ocirc;n tập trung đến từng chuyển động của cơ thể con người để c&oacute; thể &ldquo;Tạo-Ra-Điều-Tuyệt-Vời&rdquo; (Making Excellent Happen)!</p>', 1090000, 40, 10, 'conver.jpg');
 INSERT INTO product VALUES(1, 7, 'MLB Chunky New York White', N'<p>MLB - Thương hiệu MLB thuộc tập đo&agrave;n F&amp;F đ&atilde; mở cửa h&agrave;ng MLB Korea đầu ti&ecirc;n v&agrave;o năm 1997 - đ&acirc;y cũng l&agrave; m&ocirc; h&igrave;nh kinh doanh đầu ti&ecirc;n ra mắt MLB như một thương hiệu thời trang theo phong c&aacute;ch thường ng&agrave;y.<br />
 Chất liệu: Da tổng hợp&nbsp;<br />

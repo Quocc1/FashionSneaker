@@ -26,7 +26,25 @@ public class UserService implements IUserService {
     }
 
     @Override
+    public UserModel update(UserModel userModel) {
+        userDAO.update(userModel);
+        return userDAO.findById(userModel.getId());
+    }
+
+    @Override
+    public void delete(int id) {
+        userDAO.delete(id);
+    }
+
+    @Override
+    public UserModel changePassword(int id, String password) {
+        userDAO.changePassword(id, password);
+        return userDAO.findById(id);
+    }
+
+    @Override
     public int checkExistEmail(String email) {
         return userDAO.checkExistEmail(email);
     }
+
 }
