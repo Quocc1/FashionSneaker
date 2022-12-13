@@ -34,7 +34,7 @@ public class AuthorizationFilter implements Filter {
             } else {
                 response.sendRedirect(request.getContextPath() + "/home");
             }
-        } else if (url.contains("profile")) {
+        } else if (url.contains("profile") || url.contains("checkout")) {
             if (user == null) {
                 response.sendRedirect(request.getContextPath() + "/home");
             } else {

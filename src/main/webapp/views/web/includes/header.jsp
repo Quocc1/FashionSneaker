@@ -46,7 +46,7 @@
                 <div class="col-lg-3 col-md-3">
                     <div class="header__nav__option">
                         <a href="#" class="search-switch"><img src="views/web/img/icon/search.png" alt="" style="width: 18px"></a>
-                        <a href="cart"><img src="views/web/img/icon/cart.png" alt="" style="width: 18px"> <span>0</span></a>   
+                        <a href="cart"><img src="views/web/img/icon/cart.png" alt="" style="width: 18px"></a>   
                     </div>
                 </div>
 

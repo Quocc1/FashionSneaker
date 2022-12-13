@@ -30,9 +30,9 @@ public class CartItemDAO extends AbstractDAO<CartItemModel> implements ICartItem
     }
 
     @Override
-    public void update(CartItemModel cartItem) {
+    public void update(CartItemModel cartItem, int oldQuantity) {
         String sql = "UPDATE cart_item SET item_quantity = ? WHERE cart_id = ? AND product_id = ?";
-        update(sql, cartItem.getItem_quantity(),
+        update(sql, cartItem.getItem_quantity() + oldQuantity,
                 cartItem.getCart_id(),
                 cartItem.getProduct_id());
     }

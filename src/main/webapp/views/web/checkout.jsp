@@ -1,3 +1,4 @@
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %> 
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html lang="zxx">
@@ -23,6 +24,7 @@
         <link rel="stylesheet" href="views/web/css/owl.carousel.min.css" type="text/css">
         <link rel="stylesheet" href="views/web/css/slicknav.min.css" type="text/css">
         <link rel="stylesheet" href="views/web/css/style.css" type="text/css">
+        <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
     </head>
 
     <body>
@@ -58,113 +60,111 @@
             <section class="checkout spad">
                 <div class="container">
                     <div class="checkout__form">
-                        <form action="#">
+                        <form id="formSubmit" action="checkout" method="post">
                             <div class="row">
                                 <div class="col-lg-8 col-md-6">
                                     <h6 class="checkout__title">Chi Tiết Hoá Đơn
-                                        <div class="col-lg-6">
+                                        <div class="">
                                             <div class="checkout__input">
-                                                <p>Họ<span>*</span></p>
-                                                <input type="text">
-                                            </div>
-                                        </div>
-                                        <div class="col-lg-6">
-                                            <div class="checkout__input">
-                                                <p>Tên<span>*</span></p>
-                                                <input type="text">
-                                            </div>
+                                                <p>Họ Và Tên<span>*</span></p>
+                                                <input required type="text" value="${user.full_name}" class="text-dark">
                                         </div>
                                     </div>
-                                    <div class="checkout__input">
-                                        <p>Địa Chỉ<span>*</span></p>
-                                        <input type="text" placeholder="tên đường/ngõ/hẻm" class="checkout__input__add">
-                                   
-                                    </div>
-                     
-                                    
-                                    <div class="row">
-                                        <div class="col-lg-6">
-                                            <div class="checkout__input">
-                                                <p>Số Điện Thoại<span>*</span></p>
-                                                <input type="text">
-                                            </div>
-                                        </div>
-                                        <div class="col-lg-6">
-                                            <div class="checkout__input">
-                                                <p>Email<span>*</span></p>
-                                                <input type="text">
-                                            </div>
-                                        </div>
-                                    </div>
-                                   
-                                 
-                                </div>
-                                <div class="col-lg-4 col-md-6">
-                                    <div class="checkout__order">
-                                        <h4 class="order__title">Đơn hàng của bạn</h4>
-                                        <div class="checkout__order__products">Sản phẩm <span>Tổng Tiền</span></div>
-                                        <ul class="checkout__total__products">
-                                            <li>01. Vanilla salted caramel <span>$ 300.0</span></li>
-                                            <li>02. German chocolate <span>$ 170.0</span></li>
-                                            <li>03. Sweet autumn <span>$ 170.0</span></li>
-                                            <li>04. Cluten free mini dozen <span>$ 110.0</span></li>
-                                        </ul>
-                                        <ul class="checkout__total__all">
-                                            <li>Tổng phụ <span>$750.99</span></li>
-                                            <li>Tổng tiền <span>$750.99</span></li>
-                                        </ul>
-                                        
-                                        <p>Hình thức thanh toán</p>
-                                        <div class="checkout__input__checkbox">
-                                            <label for="payment">
-                                                Momo
-                                                <input type="checkbox" id="payment">
-                                                <span class="checkmark"></span>
-                                            </label>
-                                        </div>
-                                        <div class="checkout__input__checkbox">
-                                            <label for="paypal">
-                                                Thanh toán khi nhận hàng
-                                                <input type="checkbox" id="paypal">
-                                                <span class="checkmark"></span>
-                                            </label>
-                                        </div>
-                                        <button type="submit" class="site-btn">ĐẶT HÀNG</button>
-                                    </div>
+                                </h6>
+                            </div>
+                        </div>
+                        <div class="checkout__input">
+                            <p>Địa Chỉ<span>*</span></p>
+                            <input required type="text" value="${user.address}" class="text-dark">
+                        </div>
+                        <div class="row">
+                            <div class="col-lg-6">
+                                <div class="checkout__input">
+                                    <p>Số Điện Thoại<span>*</span></p>
+                                    <input required type="text" value="${user.phone_number}" class="text-dark">
                                 </div>
                             </div>
-                        </form>
+                            <div class="col-lg-6">
+                                <div class="checkout__input">
+                                    <p>Email<span>*</span></p>
+                                    <input required type="text" value="${user.email}" class="text-dark">
+                                </div>
+                            </div>
+                        </div>
+                </div>
+                <div class="col-lg-12">
+                    <div class="checkout__order">
+                        <h4 class="order__title text-center">Đơn hàng của bạn</h4>
+                        <div class="checkout__order__products">Sản phẩm<span>Tổng Tiền</span></div>
+                        <ul class="checkout__total__products">
+                            <c:forEach var="item" items="${cart.listCartItem}">
+                                <li>${item.item.product_name} - Size: ${item.item.size} (${item.item_quantity})
+                                    <span class="cart__price">${item.item.price * item.item_quantity} VND</span>
+                                </li>
+                            </c:forEach>
+                        </ul>
+                        <ul class="checkout__total__all">
+                            <li>Tổng tiền <span id="totalPayment"></span></li>
+                        </ul>
+
+                        <p>Hình thức thanh toán</p>
+                        <div class="checkout__input__radio text-dark">
+                            <input type="radio" id="momo" name="payment">
+                            <label class="p-0 m-0 d-inline-block" for="momo">Momo</label>
+                            <br>
+                            <input type="radio" id="cod" name="payment">
+                            <label class="p-0 m-0 d-inline-block" for="cod">Thanh toán khi nhận hàng</label>
+                        </div>
+                        <button type="submit" class="site-btn">ĐẶT HÀNG</button>
                     </div>
                 </div>
-            </section>
-            <!-- Checkout Section End -->
-
-            <!-- Footer Section Begin -->
-        <jsp:include page="./includes/footer.jsp"></jsp:include>
-        <!-- Footer Section End -->
-
-        <!-- Search Begin -->
-        <div class="search-model">
-            <div class="h-100 d-flex align-items-center justify-content-center">
-                <div class="search-close-switch">+</div>
-                <form class="search-model-form">
-                    <input type="text" id="search-input" placeholder="Search here.....">
-                </form>
             </div>
-        </div>
-        <!-- Search End -->
+        </form>
+    </div>
+</div>
+</section>
+<!-- Checkout Section End -->
 
-        <!-- Js Plugins -->
-        <script src="views/web/js/jquery-3.3.1.min.js"></script>
-        <script src="views/web/js/bootstrap.min.js"></script>
-        <script src="views/web/js/jquery.nice-select.min.js"></script>
-        <script src="views/web/js/jquery.nicescroll.min.js"></script>
-        <script src="views/web/js/jquery.magnific-popup.min.js"></script>
-        <script src="views/web/js/jquery.countdown.min.js"></script>
-        <script src="views/web/js/jquery.slicknav.js"></script>
-        <script src="views/web/js/mixitup.min.js"></script>
-        <script src="views/web/js/owl.carousel.min.js"></script>
-        <script src="views/web/js/main.js"></script>
-    </body>
+<!-- Footer Section Begin -->
+<jsp:include page="./includes/footer.jsp"></jsp:include>
+<!-- Footer Section End -->
+
+<!-- Search Begin -->
+<div class="search-model">
+    <div class="h-100 d-flex align-items-center justify-content-center">
+        <div class="search-close-switch">+</div>
+        <form class="search-model-form">
+            <input type="text" id="search-input" placeholder="Search here.....">
+        </form>
+    </div>
+</div>
+<!-- Search End -->
+
+<script>
+    $(document).ready(function () {
+        countTotalMoney();
+    });
+
+    function countTotalMoney() {
+        var totalMoney = 0;
+        $('.cart__price').each(function (index, obj) {
+            totalMoney += parseInt($(this).text());
+        });
+        $('#totalPayment').text(totalMoney + ' VND');
+    }
+</script>
+
+<!-- Js Plugins -->
+<script src="views/web/js/jquery-3.3.1.min.js"></script>
+<script src="views/web/js/bootstrap.min.js"></script>
+<script src="views/web/js/jquery.nice-select.min.js"></script>
+<script src="views/web/js/jquery.nicescroll.min.js"></script>
+<script src="views/web/js/jquery.magnific-popup.min.js"></script>
+<script src="views/web/js/jquery.countdown.min.js"></script>
+<script src="views/web/js/jquery.slicknav.js"></script>
+<script src="views/web/js/mixitup.min.js"></script>
+<script src="views/web/js/owl.carousel.min.js"></script>
+<script src="views/web/js/main.js"></script>
+</body>
 
 </html>

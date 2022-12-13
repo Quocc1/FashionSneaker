@@ -5,6 +5,7 @@ public class ReceiptItemModel extends AbstractModel<ReceiptItemModel> {
     private Integer product_id;
     private Integer receipt_id;
     private Integer item_quantity;
+    private ProductModel item;
 
     public Integer getProduct_id() {
         return product_id;
@@ -28,6 +29,14 @@ public class ReceiptItemModel extends AbstractModel<ReceiptItemModel> {
 
     public void setItem_quantity(Integer item_quantity) {
         this.item_quantity = item_quantity;
+    }
+
+    public ProductModel getItem() {
+        return item;
+    }
+
+    public void setItem(ProductModel item) {
+        this.item = item;
     }
 
 }

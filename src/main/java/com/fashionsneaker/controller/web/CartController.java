@@ -75,6 +75,9 @@ public class CartController extends HttpServlet {
         cartItem.setCart_id(cart.getId());
         cartItem = cartItemService.update(cartItem);
         if (cartItem != null) {
+            SessionUtil.getInstance().removeValue(request, "cart");
+            cart.setListCartItem(cartService.getAllCartItem(cart.getId()));
+            SessionUtil.getInstance().putValue(request, "cart", cart);
             response.sendRedirect(request.getContextPath() + "/cart?&message=insert_success");
         } else {
             response.sendRedirect(request.getContextPath() + "/cart?&message=insert_failed");

@@ -79,26 +79,24 @@
                                 </thead>
                                 <tbody>
                                     <c:forEach var="item" items="${cart.listCartItem}">
-                                        <tr>
-                                            <td class="product-cart-item-${item.id} d-flex">
+                                        <tr class="product_item">
+                                            <td class="product-cart-item d-flex">
                                                 <div class="product__cart__item__pic">
                                                     <img style="max-width: 130px;" src="ProductImage/${item.item.img_url}" alt="">
                                                 </div>
                                                 <div class="product__cart__item__text d-flex flex-column justify-content-around">
                                                     <h6 class="font-weight-bold">${item.item.product_name}</h6>
-                                                    <h5 class="product-price" id="product-price-${item.id}">${item.item.price} VND</h5>
+                                                    <h5 class="product-price" id="product-price">${item.item.price} VND</h5>
                                                     <p>Size: ${item.item.size}</p>
                                                 </div>
                                             </td>
 
                                             <td class="quantity__item">
-                                                <div class="quantity d-flex justify-content-center">\
-                                                    <button onclick="decreaseQuantity(this.value)" value="${item.id}" class="fa fa-angle-left dec qtybtn btn btn-light"></button>
-                                                    <p class="mx-2 my-0" id="product-quantity-${item.id}">${item.item_quantity}</p>
-                                                    <button onclick="increaseQuantity(this.value)" value="${item.id}" class="fa fa-angle-right inc qtybtn btn btn-light"></button>
+                                                <div class="quantity d-flex justify-content-center">
+                                                    <p class="mx-2 my-0 product-quantity" id="product-quantity">${item.item_quantity}</p>
                                                 </div>
                                             </td>
-                                            <td id="total-product-money-${item.id}" class="cart__price">${item.item.price} VND</td>
+                                            <td id="total-product-money" class="cart__price">${item.item.price * item.item_quantity}  VND</td>
                                             <td class="cart__close" style="cursor: pointer"><i class="fa fa-close"></i></td>
                                         </tr>
                                     </c:forEach>
@@ -155,31 +153,13 @@
                 countTotalMoney();
             });
 
-            function increaseQuantity(value) {
-                var product_quantity = parseInt($('#product-quantity-' + value).text());
-                var price = parseInt($('#product-price-' + value).text());
-                $('#product-quantity-' + value).text(product_quantity + 1);
-                $('#total-product-money-' + value).text(price * (product_quantity + 1) + " VND");
-                countTotalMoney();
-            }
-
-            function decreaseQuantity(value) {
-                var product_quantity = parseInt($('#product-quantity-' + value).text());
-                if (product_quantity > 0) {
-                    var price = parseInt($('#product-price-' + value).text());
-                    $('#product-quantity-' + value).text(product_quantity - 1);
-                    $('#total-product-money-' + value).text(price * (product_quantity - 1) + " VND");
-                    countTotalMoney();
-                }
-            }
-
             function countTotalMoney() {
-                var totalMoney = 0;
+                var totalPayment = 0;
                 $('.cart__price').each(function (index, obj) {
-                    totalMoney += parseInt($(this).text());
+                    totalPayment += parseInt($(this).text());
                 });
-                $('#totalMoney').text(totalMoney + ' VND');
-                $('#totalPayment').text(totalMoney + ' VND');
+                $('#totalMoney').text(totalPayment + ' VND');
+                $('#totalPayment').text(totalPayment + ' VND');
             }
         </script>        
 

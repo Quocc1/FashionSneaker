@@ -4,6 +4,8 @@ import com.fashionsneaker.model.CartItemModel;
 
 public interface ICartItemService {
 
+    CartItemModel findById(int id);
+    
     CartItemModel save(CartItemModel cartItem);
 
     CartItemModel update(CartItemModel cartItem);

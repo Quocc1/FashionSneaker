@@ -15,10 +15,10 @@ public class AbstractDAO<T> implements GenericDAO<T> {
     public Connection getConnection() {
         try {
             Class.forName("com.microsoft.sqlserver.jdbc.SQLServerDriver");
-            final String serverName = "LAPTOP-AEQAUS36\\SQLEXPRESS";
+            final String serverName = "localhost";
             final String dbName = "FashionSneaker";
-            final String user = "mintree";
-            final String password = "123";
+            final String user = "sa";
+            final String password = "sa";
             final String url = "jdbc:sqlserver://" + serverName + ":1433;DatabaseName=" + dbName + ";encrypt=true;trustServerCertificate=true";
             return DriverManager.getConnection(url, user, password);
         } catch (ClassNotFoundException | SQLException e) {

@@ -49,12 +49,6 @@
                 <div class="container">
                     <form id="formSubmit" action="shop" method="get">
                         <div class="row">
-                            <div class="col d-flex justify-content-end">
-                                <img src="views/web/img/icon/filter.png" style="width: 28px">
-                                <span style="color: #000">Bộ Lọc</span>
-                            </div>
-                        </div>
-                        <div class="row">
                         <c:forEach var="item" items="${product.listResult}">
                             <a href="product?id=${item.id}" class="col-lg-3 col-md-6 col-sm-6">
                                 <div class="product__item">

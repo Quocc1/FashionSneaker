@@ -10,7 +10,7 @@ public interface ICartItemDAO extends GenericDAO<CartItemModel> {
 
     int save(CartItemModel cartItem);
 
-    void update(CartItemModel cartItem);
+    void update(CartItemModel cartItem, int oldQuantity);
 
     int checkExistCartItem(int product_id, int cart_id);
 }
