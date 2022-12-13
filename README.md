@@ -8,4 +8,4 @@ Tài khoản Admin:
 
 Tài khoản User:
 - email: caobinhoh@gmail.com
-- 1234
+- password: 1234
