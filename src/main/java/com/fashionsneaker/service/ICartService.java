@@ -8,8 +8,10 @@ public interface ICartService {
 
     CartModel findById(int id);
 
+    CartModel findByUserId(int id);
+
     CartModel save(int user_id);
-    
+
     List<CartItemModel> getAllCartItem(int id);
 
 }

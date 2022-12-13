@@ -20,6 +20,13 @@ public class CartDAO extends AbstractDAO<CartModel> implements ICartDAO {
         List<CartModel> carts = query(sql, new CartMapper(), id);
         return carts.isEmpty() ? null : carts.get(0);
     }
+    
+    @Override
+    public CartModel findByUserId(int id) {
+        String sql = "SELECT * FROM cart WHERE user_id = ?";
+        List<CartModel> carts = query(sql, new CartMapper(), id);
+        return carts.isEmpty() ? null : carts.get(0);
+    }
 
     @Override
     public int save(int user_id) {

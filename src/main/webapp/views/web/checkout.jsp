@@ -109,10 +109,10 @@
 
                         <p>Hình thức thanh toán</p>
                         <div class="checkout__input__radio text-dark">
-                            <input type="radio" id="momo" name="payment">
+                            <input required type="radio" id="momo" name="payment">
                             <label class="p-0 m-0 d-inline-block" for="momo">Momo</label>
                             <br>
-                            <input type="radio" id="cod" name="payment">
+                            <input required type="radio" id="cod" name="payment">
                             <label class="p-0 m-0 d-inline-block" for="cod">Thanh toán khi nhận hàng</label>
                         </div>
                         <button type="submit" class="site-btn">ĐẶT HÀNG</button>

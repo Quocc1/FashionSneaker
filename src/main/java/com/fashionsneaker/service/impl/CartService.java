@@ -18,6 +18,11 @@ public class CartService implements ICartService {
     }
     
     @Override
+    public CartModel findByUserId(int id) {
+        return cartDAO.findByUserId(id);
+    }
+    
+    @Override
     public CartModel save(int user_id) {
         int newId = cartDAO.save(user_id);
         return cartDAO.findById(newId);

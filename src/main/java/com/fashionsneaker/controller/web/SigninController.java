@@ -50,7 +50,7 @@ public class SigninController extends HttpServlet {
             if (user.isIsAdmin()) {
                 response.sendRedirect(request.getContextPath() + "/admin-home");
             } else {
-                CartModel cart = cartService.findById(user.getId());
+                CartModel cart = cartService.findByUserId(user.getId());
                 SessionUtil.getInstance().putValue(request, "cart", cart);
                 response.sendRedirect(request.getContextPath() + "/home");
             }

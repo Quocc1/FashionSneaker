@@ -23,6 +23,7 @@
         <div class="main-content">
             <i class="fa fa-check main-content__checkmark" id="checkmark"></i>
             <p class="main-content__body" data-lead-id="main-content-body">Cảm ơn bạn đã mua sắm tại cửa hàng của chúng tôi, mọi thông tin về đơn hành đã được gửi tới email của bạn.</p>
+            <a href="shop?page=1&maxPageItem=8&sortName=product.id&sortBy=asc">Trở Về Trang Chủ</a>
         </div>
 
         <footer class="site-footer" id="footer">
