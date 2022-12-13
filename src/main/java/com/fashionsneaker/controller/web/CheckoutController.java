@@ -14,15 +14,15 @@ import javax.servlet.http.HttpServletResponse;
 
 @WebServlet(name = "CheckoutController", urlPatterns = {"/checkout"})
 public class CheckoutController extends HttpServlet {
-
-    @Inject
-    private IReceiptService receiptService;
-
-    @Inject
-    private IReceiptItemService receiptItemService;
-
-    @Inject
-    private ReceiptItemMapper mapper;
+//
+//    @Inject
+//    private IReceiptService receiptService;
+//
+//    @Inject
+//    private IReceiptItemService receiptItemService;
+//
+//    @Inject
+//    private ReceiptItemMapper mapper;
 
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {

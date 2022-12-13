@@ -17,7 +17,7 @@
     </head>
     <body>
         <header class="site-header" id="header">
-            <h1 class="site-header__title" data-lead-id="site-header-title">ĐẶT HÀNH THÀNH CÔNG!</h1>
+            <h1 class="site-header__title" data-lead-id="site-header-title">ĐẶT HÀNG THÀNH CÔNG!</h1>
         </header>
 
         <div class="main-content">
